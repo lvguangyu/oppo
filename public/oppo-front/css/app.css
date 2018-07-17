@@ -469,10 +469,10 @@ img {
 .p1-join-success .message:after{ background: url('../images/p1-2_join-success.png') no-repeat;}
 .p1-upload-error .message:after{ background: url('../images/p1-2_upload-error.png') no-repeat;}
 .p1-upload-max5m .message:after{ background: url('../images/p1-2_upload-max5m.png') no-repeat;}
-.p1-upload-max10m .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-upload-max10m.png') no-repeat;}
+.p1-upload-max10m .message:after{ background: url('../images/p1-upload-max10m.png') no-repeat;}
 .p1-upload-success .message:after{ background: url('../images/p1-2_upload-success.png') no-repeat;}
 .p1-empty-image .message:after{ background: url('../images/p1-empty-img.png') no-repeat;}
-.p1-empty-rule .message:after{ background: url('../images/p1-2_join-error.png') no-repeat;}
+.p1-empty-rule .message:after{ background: url('../images/p1-empty-rule.png') no-repeat;}
 .p1-login-first .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-login-first.png') no-repeat center;}
 .p1-update .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-update.png') no-repeat center;}
 .p1-author .message:after{ background: url('../images/p1-2_author.png') no-repeat center;}
@@ -780,7 +780,7 @@ img {
 .p2-vote-first .message:after{ background: url('../images/p2/p2-1_vote-first.png') no-repeat;}
 
 /*未中奖*/
-.p1-no-winner .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-no-winner.png') no-repeat;}
+.p1-no-winner .message:after{ background: url('../images/p3/p3-1_no-winner.png') no-repeat;}
 
 /*机会用光*/
 .p2-nextday .message:after{ background: url('../images/p3/p3-1_nextday.png') no-repeat;}
@@ -1323,16 +1323,16 @@ p.line2 {
 .p3-edit-address {
     position: fixed;
     bottom: 90px;
-    width: 317px;
-    height: 66px;
+    width: 211px;
+    height: 60px;
     left: 50%;
-    margin-left: -158px;
-    background: url('http://img1.deexcul.com/oppo/static/p3-edit-address.png') no-repeat;
+    margin-left: -106px;
+    background: url('../images/p2/p2-change-address.png') no-repeat;
 }
 
 /*修改邮寄地址弹框, 中奖弹框*/
-.p2-draw-winner .message , .p2-edit-draw-winner .message,
-.p3-draw-winner .message , .p3-edit-draw-winner .message{
+.p2-draw-winner .message ,
+.p3-draw-winner .message{
     background: url('../images/p3/p3-1_winner-bg.png') no-repeat;
     width: 805px;
     height: 1132px;
@@ -1342,6 +1342,18 @@ p.line2 {
     transform: translateY(-50%) translateX(-50%);
     position: fixed;
 }
+.p2-edit-draw-winner .message,
+.p3-edit-draw-winner .message {
+    background: url('../images/p2/p2-change-address-bg.png') no-repeat;
+    width: 805px;
+    height: 1132px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+}
+
 .p2 .p2-draw-winner .message:after, .p2 .p2-edit-draw-winner .message,
 .p3 .p3-draw-winner .message:after, .p3 .p3-edit-draw-winner .message{
     width: 805px;
@@ -1386,16 +1398,26 @@ p.line2 {
     text-align: center;
     margin: 0;
 }
-.p2-draw-winner .form, .p2-edit-draw-winner .form,
-.p3-draw-winner .form, .p3-edit-draw-winner .form{
+.p2-draw-winner .form,
+.p3-draw-winner .form{
     position: absolute;
     /*top: 580px;*/
     left: 100px;
     right: 100px;
     width: 594px;
 }
+.p2-edit-draw-winner .form,
+.p3-edit-draw-winner .form{
+    position: absolute;
+    top: 230px;
+    left: 100px;
+    right: 100px;
+    width: 594px;
+}
 .p2-draw-winner .form input,
-.p3-draw-winner .form input {
+.p3-draw-winner .form input,
+.p2-edit-draw-winner .form input,
+.p3-edit-draw-winner .form input{
     width: 594px;
     height: 109px;
     text-align: center;
@@ -1427,12 +1449,19 @@ p.line2 {
     transform: translateX(-50%);
     background: url("../images/p3/p3-1_address-input.png") no-repeat;
 }
-.p2-draw-winner .form .submit, .p2-edit-draw-winner .form .submit,
-.p3-draw-winner .form .submit, .p3-edit-draw-winner .form .submit{
+.p2-draw-winner .form .submit,
+.p3-draw-winner .form .submit{
     width: 502px;
     height: 137px;
     background: url('../images/p3/p3-submit.png') no-repeat;
     margin: 90px auto 0;
+}
+.p2-edit-draw-winner .form .submit,
+.p3-edit-draw-winner .form .submit {
+    width: 502px;
+    height: 137px;
+    background: url('../images/p3/p3-submit.png') no-repeat;
+    margin: 110px auto 0;
 }
 
 .p3-empty-mobile .message , .p3-empty-mobile .message:after{
@@ -1496,30 +1525,52 @@ p.line2 {
     width: 660px;
     height: 97px;
     margin: 20px auto;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*left: 50%;*/
+    /*-webkit-transform: translateX(-50%);*/
+    /*transform: translateX(-50%);*/
     background: url("../images/very-code-input.png");
+    position: relative;
+}
+.very-code-model .very-code-code input {
+    width: 300px;
+    left: 0;
+    top: 0;
+    transform: none;
+    flex: 0 0 1;
+    position: relative;
+    margin-left: 40px;
+}
+.very-code-model .very-code-code  button {
+    width: 400px;
+    flex: 0 0 1;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
 }
 
 .very-code-model input {
     padding-left: 50px;
 }
-.very-code-model .input button {
-    border: none;
-    outline: none;
-    background: transparent;
-    line-height: 50px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    padding: 0;
-    margin: 0;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
-    color: #fff;
-    letter-spacing: 4px;
-}
+/*.very-code-model .input button {*/
+    /*border: none;*/
+    /*outline: none;*/
+    /*background: transparent;*/
+    /*line-height: 50px;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*right: 0;*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+    /*-webkit-transform: translateY(-50%) translateX(-50%);*/
+    /*transform: translateY(-50%) translateX(-50%);*/
+    /*color: #fff;*/
+/*}*/
 .very-code-model .submit {
     width: 420px;
     height: 133px;

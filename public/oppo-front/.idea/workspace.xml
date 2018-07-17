@@ -11,94 +11,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="1506" column="1" selection-start-line="1506" selection-start-column="1" selection-end-line="1506" selection-end-column="1" />
+            <state relative-caret-position="464">
+              <caret line="1463" column="25" lean-forward="true" selection-start-line="1463" selection-start-column="25" selection-end-line="1463" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="p1-2_very-code-input.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/p1-2_very-code-input.png">
+      <file leaf-file-name="p2-change-address.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/p2/p2-change-address.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.js">
+      <file leaf-file-name="p2-change-address-bg.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/p2/p2-change-address-bg.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="vote.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vote.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="312">
+              <caret line="191" column="29" lean-forward="true" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="165" column="34" lean-forward="true" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="p1-2_no.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/p1-2_no.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="p1-2_upload-success.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/p1-2_upload-success.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="p1-2_upload-max5m.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/p1-2_upload-max5m.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="207" column="25" lean-forward="true" selection-start-line="207" selection-start-column="25" selection-end-line="207" selection-end-column="25" />
+            <state relative-caret-position="233">
+              <caret line="568" column="31" lean-forward="true" selection-start-line="568" selection-start-column="31" selection-end-line="568" selection-end-column="31" />
               <folding>
                 <element signature="n#!!block;n#ajaxUpload#0" />
                 <element signature="n#!!block;n#ajaxSubmitP1#0" />
                 <element signature="n#!!block;n#checkoutLogin#0" />
+                <element signature="n#!!block;n#initP1#0" />
                 <element signature="n#!!block;n#clearInput#0" />
                 <element signature="n#!!block;n#syncP3Comments#0" />
                 <element signature="n#!!block;n#p3Awards#0" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#!!block;n#p3WallWinners#0" />
-                <element signature="n#!!block;n#initP3WallDraw#0" />
                 <element signature="n#!!block;n#initP3Paginator#0" />
-                <element signature="n#!!block;n#p3WallMineAwards#0" />
                 <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#!!block;n#p3WallProductions#0" />
-                <element signature="n#!!block;n#checkP3Input#0" />
-                <element signature="n#!!block;n#checkP3EditInput#0" />
-                <element signature="n#!!block;n#ajaxSubmitP3#0" />
-                <element signature="n#!!block;n#ajaxEditSubmitP3#0" />
-                <element signature="n#!!block;n#p2ExcellentWinners#0" />
-                <element signature="n#!!block;n#p2ExcellentMineAwards#0" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#!!block;n#checkP2Input#0" />
                 <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-                <element signature="n#!!block;n#initRotate#0" />
-                <element signature="n#!!block;n#drawRouletteWheel#0;n#!!block;n#initRotate#0" />
+                <element signature="n#!!block;n#rnd#0;n#!!block;n#initRotate#0" />
                 <element signature="n#!!block;n#loadImage#0" />
                 <element signature="n#!!block;n#preloadP1#0" />
                 <element signature="n#!!block;n#preloadP2#0" />
@@ -108,14 +68,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="p-send-code-error.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/p-send-code-error.png">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="27" column="45" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="45" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="p-send-code-success.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/p-send-code-success.png">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name="confession.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/confession.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="71" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -129,36 +100,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>p3-pic2-draw</find>
-      <find>wall_d</find>
-      <find>p3-edit-address</find>
-      <find>empty</find>
-      <find>close</find>
-      <find>very-code-model</find>
-      <find>p1-empty-mobile</find>
-      <find>very-code-modelvery-code-model</find>
-      <find>2000</find>
-      <find>error-code</find>
-      <find>3000</find>
-      <find>swiper-slide</find>
-      <find>area1</find>
-      <find>area2</find>
-      <find>p3-error</find>
-      <find>rule</find>
-      <find>p1-upload-max10m</find>
-      <find>p1-upload-max5m</find>
+      <find>rotate</find>
+      <find>draw</find>
+      <find>initP1</find>
       <find>checkP1Input</find>
-      <find>sendC</find>
-      <find>verificationPicFile</find>
-      <find>upload</find>
-      <find>post</find>
-      <find>initDefault</find>
-      <find>very-code-btn</find>
-      <find>button</find>
-      <find>sendCode</find>
-      <find>veryCode</find>
-      <find>very-code-code</find>
+      <find>p1-upload-max10m</find>
+      <find>empty-rule</find>
       <find>p1-empty-rule</find>
+      <find>p1-no-winner</find>
+      <find>p2-edit-address</find>
+      <find>ward</find>
+      <find>p2-edit-draw-winner</find>
+      <find>user-input</find>
+      <find>checkP2EditInput</find>
+      <find>ajaxEditSubmitP3</find>
+      <find>wallSubmit</find>
+      <find>ajaxEditSubmitP2</find>
+      <find>submit</find>
+      <find>ajaxSubmitP2</find>
+      <find>ajaxSubmitP3</find>
+      <find>checkP2Input</find>
+      <find>p1-empty-username</find>
+      <find>p1-empty-mobile</find>
+      <find>p2-my-award</find>
+      <find>checkP3EditInput</find>
+      <find>checkP3Input</find>
+      <find>p3WallWinners</find>
+      <find>p3WallMineAwards</find>
+      <find>initP3WallDraw</find>
+      <find>initP3</find>
+      <find>p3-pic1-confession</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -166,12 +137,12 @@
       <list>
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/app1.js" />
-        <option value="$PROJECT_DIR$/confession.html" />
-        <option value="$PROJECT_DIR$/vote.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/config.js" />
-        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/app.css" />
+        <option value="$PROJECT_DIR$/vote.html" />
+        <option value="$PROJECT_DIR$/confession.html" />
+        <option value="$PROJECT_DIR$/js/app.js" />
       </list>
     </option>
   </component>
@@ -195,7 +166,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="34" />
     <option name="width" value="1280" />
     <option name="height" value="701" />
@@ -222,6 +193,18 @@
               <item name="oppo-front" type="b2602c69:ProjectViewProjectNode" />
               <item name="oppo-front" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oppo-front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oppo-front" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="p2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oppo-front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oppo-front" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="p3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="oppo-front" type="b2602c69:ProjectViewProjectNode" />
@@ -254,9 +237,9 @@
       <recent name="$PROJECT_DIR$/images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/images/p3" />
       <recent name="$PROJECT_DIR$/images/p2" />
+      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -413,15 +396,15 @@
       <workItem from="1531626132551" duration="47710000" />
       <workItem from="1531727051055" duration="654000" />
       <workItem from="1531730156921" duration="30802000" />
-      <workItem from="1531802094793" duration="10620000" />
+      <workItem from="1531802094793" duration="23183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158747000" />
+    <option name="totallyTimeSpent" value="171310000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="34" width="1280" height="701" extended-state="0" />
+    <frame x="-1" y="34" width="1280" height="701" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -487,111 +470,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/app.js</url>
-          <line>829</line>
+          <line>796</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/app.js</url>
-          <line>367</line>
+          <line>353</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/p2/p2-1-unselected.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle-btn.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle-cicrle.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-1_01.jpg">
+    <entry file="file://$PROJECT_DIR$/images/p-send-code-error.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/p1-2_author.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_02.png">
+    <entry file="file://$PROJECT_DIR$/images/p1-2_sumbit.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_01.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-1_submit.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_check.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_join-success.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/login-bg.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_right-red.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_right.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_phone-input.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_login-first.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_left-red.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_left.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_jury-close.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_jury-02.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_jury-03.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_jury-04.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_jury-bg.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_jury-05.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p2/p2-1-selected.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_empty-vote.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_got-draw-first.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_got-draw.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/very-code-input.png">
+    <entry file="file://$PROJECT_DIR$/images/p1-2_yes.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/phone-input.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/login-btn.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/p-send-code-success.png">
@@ -600,99 +505,28 @@
     <entry file="file://$PROJECT_DIR$/images/p-mobile-empty.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_join-error.png">
+    <entry file="file://$PROJECT_DIR$/images/very-code-input.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_jury-01.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-rule-text.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_upload-error.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_upload.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_sumbit.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_unchecked.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_yes.png">
+    <entry file="file://$PROJECT_DIR$/images/p1-image-empty.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/p1-2_upload-success.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_very-code-input.png">
+    <entry file="file://$PROJECT_DIR$/images/p1-empty-img.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_no.png">
+    <entry file="file://$PROJECT_DIR$/images/p1-rule-text.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/p1-2_upload-max5m.png">
+    <entry file="file://$PROJECT_DIR$/images/p1-empty-rule.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p-send-code-error.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/p-send-code-success.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="207" column="25" lean-forward="true" selection-start-line="207" selection-start-column="25" selection-end-line="207" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!block;n#ajaxUpload#0" />
-            <element signature="n#!!block;n#ajaxSubmitP1#0" />
-            <element signature="n#!!block;n#checkoutLogin#0" />
-            <element signature="n#!!block;n#clearInput#0" />
-            <element signature="n#!!block;n#syncP3Comments#0" />
-            <element signature="n#!!block;n#p3Awards#0" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#!!block;n#p3WallWinners#0" />
-            <element signature="n#!!block;n#initP3WallDraw#0" />
-            <element signature="n#!!block;n#initP3Paginator#0" />
-            <element signature="n#!!block;n#p3WallMineAwards#0" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#!!block;n#p3WallProductions#0" />
-            <element signature="n#!!block;n#checkP3Input#0" />
-            <element signature="n#!!block;n#checkP3EditInput#0" />
-            <element signature="n#!!block;n#ajaxSubmitP3#0" />
-            <element signature="n#!!block;n#ajaxEditSubmitP3#0" />
-            <element signature="n#!!block;n#p2ExcellentWinners#0" />
-            <element signature="n#!!block;n#p2ExcellentMineAwards#0" />
-            <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#!!block;n#checkP2Input#0" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#!!block;n#initRotate#0" />
-            <element signature="n#!!block;n#drawRouletteWheel#0;n#!!block;n#initRotate#0" />
-            <element signature="n#!!block;n#loadImage#0" />
-            <element signature="n#!!block;n#preloadP1#0" />
-            <element signature="n#!!block;n#preloadP2#0" />
-            <element signature="n#!!block;n#preloadP3#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="165" column="34" lean-forward="true" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="48" />
+        <state relative-caret-position="562">
+          <caret line="193" column="10" lean-forward="true" selection-start-line="158" selection-start-column="4" selection-end-line="193" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -704,10 +538,157 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/优秀作品展示内容.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-submit.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_zan-default.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_zan-checked.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_winner-bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_user-input.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_rule-model.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_right.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_praise-first.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_phone-input.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_no-winner.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_nextday.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_left.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_vote-model.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_vote-first.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_vote.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_rule-text.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle-cicrle-inside.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle-cicrle1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle-cicrle.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle-btn.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_got-draw-first.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_got-draw.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_empty-vote.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle-model.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-1_raffle-rule-text.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p3/p3-1_my-prize-bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-change-address.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/p2/p2-change-address-bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="1506" column="1" selection-start-line="1506" selection-start-column="1" selection-end-line="1506" selection-end-column="1" />
+        <state relative-caret-position="464">
+          <caret line="1463" column="25" lean-forward="true" selection-start-line="1463" selection-start-column="25" selection-end-line="1463" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="191" column="29" lean-forward="true" selection-start-line="191" selection-start-column="29" selection-end-line="191" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/confession.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="568" column="31" lean-forward="true" selection-start-line="568" selection-start-column="31" selection-end-line="568" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#ajaxUpload#0" />
+            <element signature="n#!!block;n#ajaxSubmitP1#0" />
+            <element signature="n#!!block;n#checkoutLogin#0" />
+            <element signature="n#!!block;n#initP1#0" />
+            <element signature="n#!!block;n#clearInput#0" />
+            <element signature="n#!!block;n#syncP3Comments#0" />
+            <element signature="n#!!block;n#p3Awards#0" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#initP3Paginator#0" />
+            <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#rnd#0;n#!!block;n#initRotate#0" />
+            <element signature="n#!!block;n#loadImage#0" />
+            <element signature="n#!!block;n#preloadP1#0" />
+            <element signature="n#!!block;n#preloadP2#0" />
+            <element signature="n#!!block;n#preloadP3#0" />
+          </folding>
         </state>
       </provider>
     </entry>

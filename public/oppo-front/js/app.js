@@ -103,25 +103,11 @@ function initDefault() {
         $(this).fadeOut();
     });
     $user.oppoId = window.localStorage.getItem('font-user-id');
-    // $user.oppoId = '15210736281';
 
     if (!$user.oppoId) {
         $('.very-code-model').fadeIn('fast');
-    }
-
-    if ($(document).find('.p1').length > 0) {
-        //首页 A-1
-        initP1();
-    }
-
-    if ($(document).find('.p2').length > 0) {
-        //转盘抽奖页
-        initP2();
-    }
-
-    if ($(document).find('.p3').length > 0) {
-        //告白墙
-        initP3();
+    } else {
+        getUserInfo();
     }
 
     $('#very-code-btn').click(function () {
@@ -228,16 +214,15 @@ function getUserInfo() {
         $user.token = res.data.token;
         $user.b1_praised = res.data.b1_praised;
         $user.a1_voted = res.data.a1_voted;
-        console.log($user);
+        console.log('user', $user);
 
         $.ajax({
             type: 'GET',
             url: config.api.info,
             data: {
-                'token': $user.token
+                'token': res.data.token
             },
             success: function (res) {
-                console.log(res);
                 $('.b1_draw_count').text(res.data.b1_draw_count);
                 $('.a1_draw_count').text(res.data.a1_draw_count);
             },
@@ -246,6 +231,7 @@ function getUserInfo() {
             },
             dataType: 'json'
         });
+
         if ($(document).find('.p1').length > 0) {
             //首页 A-1
             initP1();
@@ -454,14 +440,6 @@ function p3Awards() {
 }
 
 function p3WallWinners() {
-    var swiper = new Swiper('#p3-winners-container', {
-        scrollbarHide: true,
-        spaceBetween: 8,
-        grabCursor: true,
-        direction: 'vertical',
-        autoplay: 2000,
-        loop: true,
-    });
     $.get(config.api.wallWinners, {'token': $user.token}, function (res) {
         console.log(res);
         var tar = $('#p3-winners-swiper');
@@ -493,30 +471,29 @@ function initP3WallDraw() {
         if (!isLogin) {
             return;
         }
-        // if (!$user.b1_praised && parseInt($('.b1_draw_count').text()) <= 0) {
-        //     $('.p3-praise-first').show();
-        //     return;
-        // }
-        //
-        // if (parseInt($('.b1_draw_count').text()) <= 0) {
-        //     $('.p3-nextday').show();
-        //     return;
-        // }
-        $('.p3-draw-winner').fadeIn();
-        // $.post(config.api.wallDraw, {'token': $user.token}, function (res) {
-        //     console.log(res);
-        //     if (res.code === 200 && res.data.winner !== false) {
-        //         console.log('winner');
-        //         $user.win = res.data.winner.id;
-        //         $('.p3-draw-winner').show();
-        //     } else {
-        //         console.log('no winner');
-        //         $('.p3-no-winner').show();
-        //     }
-        //
-        //     $('.b1_draw_count').text(res.data.b1_draw_count);
-        //
-        // }, 'json');
+        if (!$user.b1_praised && parseInt($('.b1_draw_count').text()) <= 0) {
+            $('.p3-praise-first').show();
+            return;
+        }
+
+        if (parseInt($('.b1_draw_count').text()) <= 0) {
+            $('.p3-nextday').show();
+            return;
+        }
+        $.post(config.api.wallDraw, {'token': $user.token}, function (res) {
+            console.log(res);
+            if (res.code === 200 && res.data.winner !== false) {
+                console.log('winner');
+                $user.win = res.data.winner.id;
+                $('.p3-draw-winner').show();
+            } else {
+                console.log('no winner');
+                $('.p3-no-winner').show();
+            }
+
+            $('.b1_draw_count').text(res.data.b1_draw_count);
+
+        }, 'json');
     });
 }
 
@@ -552,66 +529,56 @@ function p3WallMineAwards() {
 }
 // 优秀作品展示，点赞区
 function p3WallProductions() {
-    $('#p3-confession-swiper').find('.swiper-slide').click(function () {
-        console.log($(this).data);
-        $('.preview').html('<img src="' + $(this).data('url') + '">').show();
-    });
-    var swiper = new Swiper('#p3-confession-container', {
-        effect: 'flip',
-        grabCursor: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev'
-    });
-    // $.get(config.api.wallProduction, {'token': $user.token}, function (res) {
-    //     console.log(res);
-    //     if (res.code === 200 && res.data.length > 0) {
-    //         var list = [];
-    //         $.each(res.data, function (i, row) {
-    //             list.push('<div class="swiper-slide lazyload" data-url="' + row.url + '" data-src="' + row.url + '" style="background-image:url(' + row.url + '?x-oss-process=style/minipng)"><div class="zan ' + (row.praised ? 'checked' : '') + '" data-id="' + row.id + '"></div></div>')
-    //         });
-    //         console.log(list);
-    //         $('#p3-confession-swiper').html(list.join(''));
-    //         $('#p3-confession-swiper').find('.swiper-slide').click(function () {
-    //             $('.preview').html('<img src="' + $(this).data('url') + '">').show();
-    //         });
-    //         //lazyload();
-    //
-    //         var swiper = new Swiper('#p3-confession-container', {
-    //             effect: 'flip',
-    //             grabCursor: true,
-    //             nextButton: '.swiper-button-next',
-    //             prevButton: '.swiper-button-prev'
-    //         });
-    //
-    //         $('.p3 .zan').unbind('click').click(function () {
-    //             event.stopPropagation();
-    //             var isLogin = checkoutLogin();
-    //             if (!isLogin) {
-    //                 return;
-    //             }
-    //             if (!$(this).hasClass('checked')) {
-    //                 var tar = $(this);
-    //                 $.post(config.api.praise, {id: tar.data('id'), 'token': $user.token}, function (res) {
-    //                     if (!$user.b1_praised) {
-    //                         $('.p3-got-draw').show();
-    //                     }
-    //                     console.log(res);
-    //                     tar.addClass('checked');
-    //                     $('.b1_draw_count').text(res.data.b1_draw_count);
-    //                     $user.b1_praised = res.data.b1_praised;
-    //                 }, 'json');
-    //             } else {
-    //                 var tar = $(this);
-    //                 $.post(config.api.dispraise, {id: tar.data('id'), 'token': $user.token}, function (res) {
-    //                     console.log(res);
-    //                     tar.removeClass('checked');
-    //                     $('.b1_draw_count').text(res.data.b1_draw_count);
-    //                     $user.b1_praised = res.data.b1_praised;
-    //                 }, 'json');
-    //             }
-    //         });
-    //     }
-    // }, 'json');
+    $.get(config.api.wallProduction, {'token': $user.token}, function (res) {
+        console.log(res);
+        if (res.code === 200 && res.data.length > 0) {
+            var list = [];
+            $.each(res.data, function (i, row) {
+                list.push('<div class="swiper-slide lazyload" data-url="' + row.url + '" data-src="' + row.url + '" style="background-image:url(' + row.url + '?x-oss-process=style/minipng)"><div class="zan ' + (row.praised ? 'checked' : '') + '" data-id="' + row.id + '"></div></div>')
+            });
+            console.log(list);
+            $('#p3-confession-swiper').html(list.join(''));
+            $('#p3-confession-swiper').find('.swiper-slide').click(function () {
+                $('.preview').html('<img src="' + $(this).data('url') + '">').show();
+            });
+            //lazyload();
+
+            var swiper = new Swiper('#p3-confession-container', {
+                effect: 'flip',
+                grabCursor: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev'
+            });
+
+            $('.p3 .zan').unbind('click').click(function () {
+                event.stopPropagation();
+                var isLogin = checkoutLogin();
+                if (!isLogin) {
+                    return;
+                }
+                if (!$(this).hasClass('checked')) {
+                    var tar = $(this);
+                    $.post(config.api.praise, {id: tar.data('id'), 'token': $user.token}, function (res) {
+                        if (!$user.b1_praised) {
+                            $('.p3-got-draw').show();
+                        }
+                        console.log(res);
+                        tar.addClass('checked');
+                        $('.b1_draw_count').text(res.data.b1_draw_count);
+                        $user.b1_praised = res.data.b1_praised;
+                    }, 'json');
+                } else {
+                    var tar = $(this);
+                    $.post(config.api.dispraise, {id: tar.data('id'), 'token': $user.token}, function (res) {
+                        console.log(res);
+                        tar.removeClass('checked');
+                        $('.b1_draw_count').text(res.data.b1_draw_count);
+                        $user.b1_praised = res.data.b1_praised;
+                    }, 'json');
+                }
+            });
+        }
+    }, 'json');
 }
 
 function checkP3Input() {
@@ -627,17 +594,17 @@ function checkP3Input() {
         return false;
     }
 
-    if ($('#name').val() === '') {
-        console.log('name can not empty');
-        $('.p3-empty-name').show();
-        return false;
-    }
-
-    if ($('#address').val() === '') {
-        console.log('address can not empty');
-        $('.p3-empty-address').show();
-        return false;
-    }
+    // if ($('#name').val() === '') {
+    //     console.log('name can not empty');
+    //     $('.p3-empty-name').show();
+    //     return false;
+    // }
+    //
+    // if ($('#address').val() === '') {
+    //     console.log('address can not empty');
+    //     $('.p3-empty-address').show();
+    //     return false;
+    // }
 
     return true;
 }
@@ -655,17 +622,17 @@ function checkP3EditInput() {
         return false;
     }
 
-    if ($('#name2').val() === '') {
-        console.log('name can not empty');
-        $('.p3-empty-name').show();
-        return false;
-    }
-
-    if ($('#address2').val() === '') {
-        console.log('address can not empty');
-        $('.p3-empty-address').show();
-        return false;
-    }
+    // if ($('#name2').val() === '') {
+    //     console.log('name can not empty');
+    //     $('.p3-empty-name').show();
+    //     return false;
+    // }
+    //
+    // if ($('#address2').val() === '') {
+    //     console.log('address can not empty');
+    //     $('.p3-empty-address').show();
+    //     return false;
+    // }
 
     return true;
 }
@@ -828,14 +795,6 @@ function initP3() {
 }
 
 function p2ExcellentWinners() {
-    var swiper = new Swiper('#p2-winners-container', {
-        scrollbarHide: true,
-        spaceBetween: 8,
-        grabCursor: true,
-        direction: 'vertical',
-        autoplay: 2000,
-        loop: true
-    });
     $.get(config.api.excellentWinners, {'token': $user.token}, function (res) {
         console.log(res);
         var tar = $('#p2-winners-swiper');
@@ -878,11 +837,11 @@ function p2ExcellentMineAwards() {
 
 
 function checkP2Input() {
-    if ($('#username').val() === '') {
-        console.log('username can not empty');
-        $('.p1-empty-username').show();
-        return false;
-    }
+    // if ($('#username').val() === '') {
+    //     console.log('username can not empty');
+    //     $('.p1-empty-username').show();
+    //     return false;
+    // }
 
     if ($('#mobile').val() === '') {
         console.log('mobile can not empty');
@@ -894,11 +853,11 @@ function checkP2Input() {
 }
 
 function checkP2EditInput() {
-    if ($('#username2').val() === '') {
-        console.log('username can not empty');
-        $('.p1-empty-username').show();
-        return false;
-    }
+    // if ($('#username2').val() === '') {
+    //     console.log('username can not empty');
+    //     $('.p1-empty-username').show();
+    //     return false;
+    // }
 
     if ($('#mobile2').val() === '') {
         console.log('mobile can not empty');
@@ -911,10 +870,12 @@ function checkP2EditInput() {
 
 function ajaxSubmitP2() {
     var data = {
-        oppo_id: $('#username').val().trim(),
-        mobile: $('#mobile').val().trim(),
+        oppo_id: $user.oppoId,
+        mobile: $('#mobile2').val().trim(),
         token: $user.token,
         id: $user.win,
+        name: $('#name2').val().trim(),
+        address: $('#address2').val().trim()
     };
 
     console.log(data);
@@ -945,10 +906,12 @@ function ajaxSubmitP2() {
 
 function ajaxEditSubmitP2() {
     var data = {
-        oppo_id: $('#username2').val().trim(),
+        oppo_id: $user.oppoId,
         mobile: $('#mobile2').val().trim(),
         token: $user.token,
         id: $user.win,
+        name: $('#name2').val().trim(),
+        address: $('#address2').val().trim()
     };
 
     console.log(data);
@@ -1058,20 +1021,18 @@ function initP2() {
         $('#p2-up-frame').find('.checked').each(function () {
             ids.push($(this).data('id'));
         });
-        $('.a1_draw_count').text(3);
-        $('.p2-got-draw-first').show();
 
-        // $.post(config.api.vote, {ids: ids, 'token': $user.token}, function (res) {
-        //     if (res.code === 200) {
-        //         $('.a1_draw_count').text(res.data.a1_draw_count);
-        //         //alert('成功参与，获得一次抽奖机会');
-        //         if (!$user.a1_voted) {
-        //              $('.p2-got-draw-first').show();
-        //         }
-        //     } else {
-        //         $('.p1-error').show();
-        //     }
-        // }, 'json')
+        $.post(config.api.vote, {ids: ids, 'token': $user.token}, function (res) {
+            if (res.code === 200) {
+                $('.a1_draw_count').text(res.data.a1_draw_count);
+                //alert('成功参与，获得一次抽奖机会');
+                if (!$user.a1_voted) {
+                     $('.p2-got-draw-first').show();
+                }
+            } else {
+                $('.p1-error').show();
+            }
+        }, 'json')
 
     });
 
@@ -1109,8 +1070,8 @@ function initRotate() {
     $(document).ready(function () {
         //动态添加大转盘的奖品与奖品区域背景颜色
         turnplate.randomRate = ["20%", '10%', '10%', '10%', '50%'];  //小心设置按100%分配
-        turnplate.restaraunts = ["1可币", "3可币", "5可币", "10可币", "谢谢参与"];
-        turnplate.colors = ["#c8fee3", "#8cf0c5", "#c8fee3", "#8cf0c5", "#c8fee3"];
+        turnplate.restaraunts = ["黄铜书签", "羽毛笔","谢谢参与", "星星彩灯", "谢谢参与"];
+        turnplate.colors = ["#353535", "#282828", "#464646", "#171717", "#928c8c"];
 
 
         var rotateTimeOut = function () {
@@ -1225,6 +1186,7 @@ function initRotate() {
     };
 
     function drawRouletteWheel() {
+        console.log('drawRouletteWheel');
         var canvas = document.getElementById("wheelcanvas");
         if (canvas.getContext) {
             //根据奖品个数计算圆周角度
@@ -1249,7 +1211,8 @@ function initRotate() {
                 ctx.save();
 
                 //----绘制奖品开始----
-                ctx.fillStyle = "#237b51";
+                // ctx.fillStyle = "#237b51";
+                ctx.fillStyle = "#fff";
                 var text = turnplate.restaraunts[i];
                 var line_height = 31;
                 //translate方法重新映射画布上的 (0,0) 位置
