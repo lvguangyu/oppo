@@ -95,9 +95,9 @@ function initDefault() {
         //$('.p3-ajaxing').hide();
     });
 
-    // $('.shadow .close').click(function () {
-    //     $(this).parents('.shadow').fadeOut();
-    // });
+    $('.shadow .close').click(function () {
+        $(this).parent().parent('.shadow').fadeOut();
+    });
 
     $('.preview').click(function () {
         $(this).fadeOut();
@@ -113,6 +113,9 @@ function initDefault() {
     $('#very-code-btn').click(function () {
         var phone = $('#very-code-phone').val().trim();
         if (phone) {
+            if ( $('#very-code-btn').text() != '获取验证码') {
+                return;
+            }
             $('#code').val('');
             var i = 60;
             sendCode(phone);
@@ -1057,14 +1060,14 @@ function initP2() {
 
 function initRotate() {
     var turnplate = {
-        restaraunts: [],				//大转盘奖品名称
-        colors: [],					//大转盘奖品区块对应背景颜色
-        outsideRadius: 240,			//大转盘外圆的半径
-        textRadius: 155,				//大转盘奖品位置距离圆心的距离
-        insideRadius: 68,			//大转盘内圆的半径
-        startAngle: 0,				//开始角度
+        restaraunts: [],                //大转盘奖品名称
+        colors: [],                 //大转盘奖品区块对应背景颜色
+        outsideRadius: 240,         //大转盘外圆的半径
+        textRadius: 155,                //大转盘奖品位置距离圆心的距离
+        insideRadius: 68,           //大转盘内圆的半径
+        startAngle: 0,              //开始角度
         randomRate: [],              //控制获奖率，百分制(相加需等于100%)，对应restaraunts(顺序需要保持一致)，
-        bRotate: false				//false:停止;ture:旋转
+        bRotate: false              //false:停止;ture:旋转
     };
 
     $(document).ready(function () {
@@ -1294,90 +1297,79 @@ function loadImage() {
 }
 
 function preloadP1(preload) {
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-1-bg.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-1-pic1.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-1-submit.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-empty-image.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-empty-mobile.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-empty-rule.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-empty-username.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-error.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-join-success.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-popup1-bg.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-upload-error.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-upload-max10m.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-upload-success.png");
-    // preload.loadFile("http://img1.deexcul.com/oppo/static/p1-update.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/login-bg.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-success.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-error.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-mobile-empty.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_01.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_02.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_03.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_submit.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_bg.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_01.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_02.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_join-error.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_join-success.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_jury-bg.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_jury-01.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_jury-02.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_jury-03.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_jury-04.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_jury-05.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_upload-error.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_upload-max5m.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-upload-max10m.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_upload-success.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-empty-img.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-empty-rule.png");
 }
 
 function preloadP2(preload) {
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-1.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-2.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-b1.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-b2.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-draw-title.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-pic1.jpg");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-popup1-bg.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-popup2-bg.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-vote-title.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-vote.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p2-winner-title.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-empty-image.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-empty-mobile.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-empty-rule.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-empty-username.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-error.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-join-success.png");
-
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-popup-edit.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-login-first.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-edit-address.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-success.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p1-update.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/login-bg.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-success.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-error.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-mobile-empty.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-bg.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-01.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_raffle.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_raffle-model.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_vote-model.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_raffle.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_empty-vote.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_got-draw.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_got-draw-first.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_raffle-rule-text.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_vote.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_vote-first.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address-bg.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_nextday.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_no-winner.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_my-prize-bg.png");
 }
 
 function preloadP3(preload) {
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-ajaxing.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-bg.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-close.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-comment-success.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-draw-title.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-draw.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-error.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-error1.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-got-draw.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-j-large.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-j-small.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-message-success.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-nextday.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-no-winner.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-pic1.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-pic2.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-pic3.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-popup1-bg.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-popup2-bg.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-popup3-bg.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-popup4-bg.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-praise-first.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-rule-title.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-sent.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-success.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-try-tomorrow.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-winner-title.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-zan-checked.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-zan-default.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/login-bg.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-success.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-error.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-mobile-empty.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_bg.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1-01.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1-02.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_draw-model.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_rule-model.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_my-prize-bg.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_winner-bg.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_nextday.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_no-winner.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_praise-first.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_zan-checked.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_zan-checked.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_zan-default.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address.png");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address-bg.png");
 
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-empty-username.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-empty-mobile.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-empty-name.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-empty-address.png");
-
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-popup-edit.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-login-first.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-edit-address.png");
-    preload.loadFile("http://img1.deexcul.com/oppo/static/p3-update.png");
 }
-
 function handleFileComplete() {
     console.log('load');
 }
