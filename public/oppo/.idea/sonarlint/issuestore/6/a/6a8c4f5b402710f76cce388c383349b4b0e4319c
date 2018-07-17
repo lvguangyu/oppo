@@ -1,0 +1,107 @@
+
+?javascript:S2228"Remove this logging statement.(ö…»å8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+_javascript:S1854"9Remove this useless assignment to local variable "swiper"(¶©èëùÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(‚ò³ıÿÿÿÿ8çÛ×Å,
+?javascript:S2228"Remove this logging statement.(ÀÊşÆ8¯‡ÏÅ,
+Mjavascript:CommentedCode"Remove this commented out code.(Çãßõüÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(öÒìõ8¯‡ÏÅ,
+jjavascript:OneStatementPerLine"6Reformat the code to have only one statement per line.(³É¹·üÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(ûø™´8¯‡ÏÅ,
+ajavascript:UnusedVariable"7Remove the declaration of the unused 'swiper' variable.(†ú¢¼8¯‡ÏÅ,
+hjavascript:S2814"GRename "texts" as this name is already used in declaration at line 868.(“àá˜8¯‡ÏÅ,
+fjavascript:UnusedVariable"7Remove the declaration of the unused 'swiper' variable.(¶©èëùÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(¿Ì«ùÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(³ôèş8¯‡ÏÅ,
+kjavascript:S2814"ERename "tar" as this name is already used in declaration at line 394.(–óÌ§ÿÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+€javascript:S1067"ZReduce the number of conditional operators (5) used in the expression (maximum allowed 3).(µì”óûÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(ŠØ‹ğÿÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(ö…»å8¯‡ÏÅ,
+Mjavascript:CommentedCode"Remove this commented out code.(ì±ó¨úÿÿÿÿ8¯‡ÏÅ,
+[javascript:S1854";Remove this useless assignment to local variable "filePath"(ş·;8¯‡ÏÅ,
+‘javascript:S3827"p"createjs" does not exist. Change its name or declare it so that its usage doesn't result in a "ReferenceError".(›²Ù8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(‹£²­8çÛ×Å,
+?javascript:S2228"Remove this logging statement.(şˆ‚8¼ĞòÅ,
+?javascript:S2228"Remove this logging statement.(¯ƒ…â8¯‡ÏÅ,
+Mjavascript:CommentedCode"Remove this commented out code.(ë“óùÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(öÒìõ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(–¼îÿûÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(‹£²­8¯‡ÏÅ,
+bjavascript:UnusedVariable"9Remove the declaration of the unused 'filePath' variable.(ş·;8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(•¾å´8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(ö…»å8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(˜Å³¹8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(õŒ¼Òùÿÿÿÿ8¯‡ÏÅ,
+fjavascript:UnusedVariable"7Remove the declaration of the unused 'swiper' variable.(ÏèÔšúÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(ö…»å8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+Hjavascript:CommentedCode"Remove this commented out code.(ê‡»ó8¯‡ÏÅ,
+Rjavascript:S2692"10 is a valid index, but is ignored by this check.(¼íşÊ8¯‡ÏÅ,
+cjavascript:UnusedVariable"9Remove the declaration of the unused 'fileName' variable.(¥¡œŞ8¯‡ÏÅ,
+d'javascript:FunctionDefinitionInsideLoop"'Define this function outside of a loop.(›í¶çúÿÿÿÿ8¯‡ÏÅ,
+Mjavascript:CommentedCode"Remove this commented out code.(æ³¢òûÿÿÿÿ8¯‡ÏÅ,
+javascript:S3827"n"Swiper" does not exist. Change its name or declare it so that its usage doesn't result in a "ReferenceError".(†ú¢¼8¯‡ÏÅ,
+\javascript:S1854";Remove this useless assignment to local variable "fileName"(¥¡œŞ8¯‡ÏÅ,
+_javascript:S1854"9Remove this useless assignment to local variable "swiper"(Ü™†øúÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(ÖÓöçúÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+jjavascript:OneStatementPerLine"6Reformat the code to have only one statement per line.(¾¸…Ùúÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+Mjavascript:CommentedCode"Remove this commented out code.(ˆÖÕ£üÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(í÷“”8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8çÛ×Å,
+kjavascript:S2814"ERename "img" as this name is already used in declaration at line 891.(©§¶ÿÿÿÿÿ8¯‡ÏÅ,
+Gjavascript:UnusedVariable"Remove unused function 'rnd'.(ûÃá™8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(ö…»å8çÛ×Å,
+Gjavascript:CommentedCode"Remove this commented out code.(Ğïı&8Æ§çÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(¯ƒ…â8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+fjavascript:S1854"@Remove this useless assignment to local variable "rotateTimeOut"(¨ùí•úÿÿÿÿ8¯‡ÏÅ,
+vjavascript:NestedIfDepth"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ş¾i8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(ŠÊ¡¼8¯‡ÏÅ,
+Hjavascript:CommentedCode"Remove this commented out code.(Òæœ8¯‡ÏÅ,
+fjavascript:UnusedVariable"7Remove the declaration of the unused 'swiper' variable.(Ü™†øúÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(ö…»å8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(‹£²­8¯‡ÏÅ,
+ejavascript:OneStatementPerLine"6Reformat the code to have only one statement per line.(Äùè 8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(‚ò³ıÿÿÿÿ8¯‡ÏÅ,
+mjavascript:UnusedVariable">Remove the declaration of the unused 'rotateTimeOut' variable.(¨ùí•úÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(¿Ì«ùÿÿÿÿ8¯‡ÏÅ,
+Rjavascript:S2692"10 is a valid index, but is ignored by this check.(Î‘æ¨8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(¯ƒ…â8€´ÕÅ,
+ijavascript:S2814"CRename "i" as this name is already used in declaration at line 803.(úìæ§üÿÿÿÿ8¯‡ÏÅ,
+Hjavascript:CommentedCode"Remove this commented out code.(ÍÑ‰8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+]javascript:S1854"7Remove this useless assignment to local variable "temp"(¼ı³èúÿÿÿÿ8¯‡ÏÅ,
+qjavascript:S2814"KRename "paginator" as this name is already used in declaration at line 346.(Ï¥‰½üÿÿÿÿ8¯‡ÏÅ,
+djavascript:S2814"CRename "i" as this name is already used in declaration at line 803.(Šã–Ü8¯‡ÏÅ,
+Gjavascript:CommentedCode"Remove this commented out code.(ü¿üx8¯‡ÏÅ,
+˜javascript:S3827"r"pagination" does not exist. Change its name or declare it so that its usage doesn't result in a "ReferenceError".(Ï¥‰½üÿÿÿÿ8¯‡ÏÅ,
+Zjavascript:S1854"9Remove this useless assignment to local variable "swiper"(†ú¢¼8¯‡ÏÅ,
+>javascript:S2228"Remove this logging statement.(£œ×8¯‡ÏÅ,
+}javascript:S1871"]This conditional operation returns the same value whether the condition is "true" or "false".(ÿÖ½68¾»°Å,
+?javascript:S2228"Remove this logging statement.(Û”§Ğ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(‚ò³ıÿÿÿÿ8¯‡ÏÅ,
+\javascript:S1854";Remove this useless assignment to local variable "fileSize"(Ãí£Š8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+?javascript:S2228"Remove this logging statement.(ãø›8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(¸«¶àüÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(¿Ì«ùÿÿÿÿ8çÛ×Å,
+Mjavascript:CommentedCode"Remove this commented out code.(ûÚŞ³úÿÿÿÿ8¯‡ÏÅ,
+_javascript:S1854"9Remove this useless assignment to local variable "swiper"(ÏèÔšúÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+vjavascript:NestedIfDepth"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ş¾i8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(•Ï¥…ıÿÿÿÿ8¯‡ÏÅ,
+Mjavascript:CommentedCode"Remove this commented out code.(Çãßõüÿÿÿÿ8¯‡ÏÅ,
+d'javascript:FunctionDefinitionInsideLoop"'Define this function outside of a loop.(›í¶çúÿÿÿÿ8¯‡ÏÅ,
+Djavascript:S2228"Remove this logging statement.(â×‚ñùÿÿÿÿ8±ÀêÅ,
+cjavascript:S2814"CRename "j" as this name is already used in declaration at line 869.(ş¾i8¯‡ÏÅ,
+zjavascript:S3776"TRefactor this function to reduce its Cognitive Complexity from 32 to the 15 allowed.(ØôĞøøÿÿÿÿ8¯‡ÏÅ,

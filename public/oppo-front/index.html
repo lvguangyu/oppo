@@ -1,0 +1,197 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <!-- HTTP 1.1 -->
+    <meta http-equiv="pragma" content="no-cache">
+    <!-- HTTP 1.0 -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=1080,user-scalable=no">
+    <!-- Force latest IE rendering engine & Chrome Frame -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" href="http://img1.deexcul.com/oppo/static/js/swiper/swiper.min.css">
+    <script src="http://img1.deexcul.com/oppo/static/js/swiper/swiper.min.js"></script>
+
+    <script src="http://img1.deexcul.com/oppo/static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://img1.deexcul.com/oppo/static/js/preloadjs-0.6.2.min.js"></script>
+    <script src="http://img1.deexcul.com/oppo/static/js/lazyload.min.js"></script>
+    <script src="config.js?v29"></script>
+    <script src="bundle.js?v29"></script>
+    <script src="js/app.js?v29"></script>
+
+    <title></title>
+
+    <link href="css/app.css?v29" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div id="app">
+    <div class="p1">
+        <img src="images/p1-1_01.jpg">
+        <img src="images/p1-1_submit.jpg" class="p1-button">
+        <img src="images/p1-1_03.jpg">
+    </div>
+    <div class="p1-1-1 shadow hide">
+        <div class="p1-1-1-close close"></div>
+        <div class="area1">
+            <!--<p>1. 参赛稿件严格要求为原创手写稿件，稿件内容为古诗词，原则上诗词篇幅不做上限要求，但为完整体现古代诗词意境，需不少于20字。参赛作品需以本人手写华为账号ID作为落款。纸张及用笔不限；<br>-->
+                <!--2.每位参赛者最多可投3份作品，严格要求所投稿件必须为本人亲笔书写，如有抄袭、盗用、代笔等行为，一经发现取消所有参赛及获奖资格，我方将积极配合平台及原作者维护正当权益；<br>-->
+                <!--3.作品征集截止后，华为及Aa字库组成的专业评审团对所有参赛稿件进行评审，评审选出的20部作品将与Aa字库进行签约，在作者按要求完成8968示例字稿后由Aa字库制作字体包，首发上线至华为平台销售； <br>-->
+                <!--4.评审通过的20部作品将公示在主题商店内，最终由评委打分和用户投票评定获奖名次。最终获奖名单将在8月22日公布在主题商店内，公示为期一周； <br>-->
+                <!--5.获奖作品接受投票及公示期间如接到关于稿件原创性的投诉，经核实如判定为非本人原创，平台及Aa字库有权取消获奖资格及终止合约； <br>-->
+                <!--6.已签约作者需在9月5日前完成示例字稿的手写工作，如未能按时完成，将视情况终止奖品发放； <br>-->
+                <!--7.已签约任意一家字库公司的作品参赛将无法参与奖项评定。 <br></p>-->
+            <p><img src="./images/p1-rule-text.png"></p>
+            <div class="judge"></div>
+        </div>
+        <div class="area2">
+            <div class="input">
+                <input type="text" placeholder="手机号码／邮箱" id="mobile"/>
+            </div>
+            <!--<div class="input">-->
+                <!--<input type="text" placeholder="输入验证码" id="code"/>-->
+                <!--<button type="button" id="very-code-btn">获取验证码</button>-->
+            <!--</div>-->
+            <div class="upload">
+                <img src="" style="display:none;" id="upload_url"/>
+                <input id="upload" type="file" accept="image/*">
+            </div>
+            <div class="p1-1-rule checkbox-group">
+                <label class="checkbox">
+                <span>
+                <input type="checkbox" id="rule" name="rule" class="as-checkbox" value="1">
+                <label for="rule"></label>
+                </span>
+                <span class="word">我已阅读参赛细则</span>
+                </label>
+            </div>
+            <div class="submit"></div>
+        </div>
+        <div class="hide p1-jury shadow">
+            <div class="p1-jury-container">
+                <div class="close gray-close jury-close"></div>
+                <div class="swiper-container" id="p1-jury-swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background:url(./images/p1-2_jury-01.png) no-repeat"></div>
+                        <div class="swiper-slide" style="background:url(./images/p1-2_jury-02.png) no-repeat"></div>
+                        <div class="swiper-slide" style="background:url(./images/p1-2_jury-03.png) no-repeat"></div>
+                        <div class="swiper-slide" style="background:url(./images/p1-2_jury-04.png) no-repeat"></div>
+                        <div class="swiper-slide" style="background:url(./images/p1-2_jury-05.png) no-repeat"></div>
+                    </div>
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hide p1-empty-username shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-empty-mobile shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-error shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-join-success shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-upload-error shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-upload-max10m shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-upload-max5m shadow">
+            <div class="message">
+                <div class="close  gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-upload-success shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-empty-image shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-empty-rule shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+            </div>
+        </div>
+        <div class="hide p1-login-first shadow">
+            <div class="message"></div>
+        </div>
+        <div class="hide p1-update shadow">
+            <div class="message"></div>
+        </div>
+        <div class="hide p1-author shadow">
+            <div class="message">
+                <div class="close gray-close"></div>
+                <div class="yes-author"></div>
+                <div class="no-author"></div>
+            </div>
+        </div>
+    </div>
+    <div class="hide very-code-model shadow">
+        <div class="message">
+            <div class="close gray-close"></div>
+            <div class="content">
+                <div class="input very-code-mobile">
+                    <input type="text" placeholder="手机号码" id="very-code-phone" class="very"/>
+                </div>
+                <div class="input very-code-code">
+                    <input type="text" placeholder="输入验证码" id="code" class="very"/>
+                    <button type="button" id="very-code-btn">获取验证码</button>
+                </div>
+                <div class="submit disabled"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="hide error-code shadow">
+        <div class="message">
+            <div class="close gray-close"></div>
+        </div>
+    </div>
+    <div class="hide success-code shadow">
+        <div class="message">
+            <div class="close gray-close"></div>
+        </div>
+    </div>
+    <div class="hide empty-mobile shadow">
+        <div class="message">
+            <div class="close gray-close"></div>
+        </div>
+    </div>
+    <div class="hide error-network shadow">
+        <div class="message">
+            <div class="close gray-close"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

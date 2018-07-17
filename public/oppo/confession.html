@@ -1,0 +1,245 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <!-- HTTP 1.1 -->
+    <meta http-equiv="pragma" content="no-cache">
+    <!-- HTTP 1.0 -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=1080,user-scalable=no">
+    <!-- Force latest IE rendering engine & Chrome Frame -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" href="http://img1.deexcul.com/oppo/static/js/swiper/swiper.min.css">
+    <script src="http://img1.deexcul.com/oppo/static/js/swiper/swiper.min.js"></script>
+
+    <script src="http://img1.deexcul.com/oppo/static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://img1.deexcul.com/oppo/static/js/preloadjs-0.6.2.min.js"></script>
+    <script src="http://img1.deexcul.com/oppo/static/js/lazyload.min.js"></script>
+    <script src="http://img1.deexcul.com/oppo/static/js/pagination.full.min.js"></script>
+    <script src="config.js?v29"></script>
+    <script src="bundle.js?v29"></script>
+    <script src="js/app.js?v29"></script>
+
+    <script type="text/html" id="pagination-template">
+    <div class="pagination">
+        <% if (previous) {%>
+            <a href="javascript:loadComment(<%=previous%>);"><span class="button-prev"></span></a>
+        <% } else { %> 
+            <span class="button-prev disabled"></span>
+        <% } %>
+        <% for ( var i = 0; i < range.length; i++ ) { if (i+1 === current) {%>
+            <span class="active"><a href="javascript:loadComment(<%=range[i]%>)" >
+            <%=range[i]%></a></span>
+            <% } else { %>
+            <span><a href="javascript:loadComment(<%=range[i]%>)"><%=range[i]%></a></span>
+        <% } } %>
+        <% if (next) {%>
+            <a href="javascript:loadComment(<%=next%>)"><span class="button-next"></span></a>
+        <% } else { %> 
+            <span class="button-next disabled"></span>
+        <% } %>
+    </div>
+    </script>
+
+    <title>OPPO 告白墙</title>
+
+    <link href="css/app.css?v29" rel="stylesheet" type="text/css"/>
+</head>
+<body class="p3">
+
+<div id="app">
+    <div>
+        <div class="p3-pic1">
+            <div class="p3-text-right">
+                <span id="show-rule">规则说明</span>
+            </div>
+            <p>在这里，为你喜欢的作品点亮红心，为爱助攻！<br>
+成功助力告白还可参与下方的抽奖活动，精彩好礼拿不停！</p>
+            <div class="p3-pic1-confession">
+                <!-- Swiper -->
+                <div class="swiper-container" id="p3-confession-container">
+                    <div class="swiper-wrapper" id="p3-confession-swiper">
+                        <!-- <div class="swiper-slide" style="background-image:url(http://img1.deexcul.com/oppo/2018/06/04/201806040550484539bCN.jpg)">
+                            <div class="zan"></div>
+                        </div> -->
+                    </div>
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <div class="p3-pic2">
+            <div class="p3-text-right">
+                <span id="show-draw">抽奖规则</span>
+            </div>
+            <div class="p3-pic2-winner">
+                <!-- Swiper -->
+                <div class="swiper-container" id="p3-winners-container">
+                    <div class="swiper-wrapper" id="p3-winners-swiper">
+                        <!--<div class="swiper-slide">-->
+                            <!--<p>-->
+                                <!--恭喜 13826019412<br>获得 一等奖 奖品-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="p3-pic2-award" id="p3-awards">
+                <!-- Swiper -->
+                <div class="swiper-container" id="p3-awards-container">
+                    <div class="swiper-wrapper" id="p3-awards-swiper">
+                        <!--<div class="swiper-slide" style="background-image:url(http://img1.deexcul.com/oppo/2018/06/04/201806040550484539bCN.jpg)"></div>-->
+                    </div>
+                    <!-- Add Scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+
+            <div class="p3-pic2-draw" id="wall_draw"></div>
+
+            <div class="p3-pic2-selected">
+                <p>还剩 <span class="b1_draw_count">0</span> 次抽奖机会</p>
+            </div>
+
+            <div class="p3-my-award">
+                <span>我的奖品</span>
+            </div>
+        </div>
+        <div class="p3-pic3">
+            <div class="p3-pic3-message" id="p3-comments">
+                <ul>
+                    <!-- <li>
+                        <div class="title">2018xxxx3f</div>
+                        <p>用户留言用户留言用户留言用户留言用户留言用户留言用户留</p>
+                    </li> -->
+                </ul>
+                <div id="paging"></div>
+            </div>
+            <div class="p3-pic3-input">
+                <input type="text" placeholder="请输入留言" id="comment" maxlength="140" />
+            </div>
+            <div class="p3-pic3-sent"></div>
+        </div>
+    </div>
+
+    <div class="hide p3-rule shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <p>1、上传作品参与比赛时，选择“授权告白墙”展示的作品将有机会在此页面进行展示。每天展示内容都会更换。</p>
+                <p>2、你可以对你喜欢的展出的作品进行点赞，点亮红心即代表点赞成功。点赞张数不限，当天限第一次点赞可获得三次抽奖机会。每天可参与点赞&抽奖活动。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide p3-draw shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <p>参与告白墙点亮红心活动即可获得3次抽奖机会。每天点亮红心次数不限，仅限第一次点赞获得3次抽奖机会。抽奖机会当天有效，不可累加。所获奖品将在手写情书征集大赛结束后15个工作日内发放。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide p3-winner shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <ul id="mine-awards">
+                    <!--<li><div class="award" style="background-image: url('http://img1.deexcul.com/oppo/static/bg.png');"></div></li>-->
+                </ul>
+            </div>
+            <div class="p3-edit-address"></div>
+        </div>
+    </div>
+
+    <div class="hide p3-draw-winner shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <p class="award-title">恭喜您获得xxx奖品！</p>
+                <p class="line1">请在下方填写您的联系方式！</p>
+                <p class="line2">*请务必填写准确信息，<br>若工作人员无法联系到您，将视为主动弃奖。</p>
+
+                <div class="form">
+                    <div class="input">
+                        <input type="text" placeholder="OPPO账号" id="username" />
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="手机号码" id="mobile" />
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="收件人" id="name" />
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="收件地址" id="address" />
+                    </div>
+
+                    <div class="submit"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide p3-edit-draw-winner shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <div class="form">
+                    <div class="input">
+                        <input type="text" placeholder="OPPO账号" id="username2" />
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="手机号码" id="mobile2" />
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="收件人" id="name2" />
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="收件地址" id="address2" />
+                    </div>
+
+                    <div class="submit"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide p3-empty-username shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-empty-mobile shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-empty-name shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-empty-address shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-login-first shadow"><div class="message"></div></div>
+    <div class="hide p3-error shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-message-success shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-nextday shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-success shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-got-draw shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-praise-first shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-try-tomorrow shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-ajaxing shadow"><div class="message"></div></div>
+    <div class="hide p3-comment-success shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-error1 shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p3-no-winner shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide preview shadow"><div class="message"></div></div>
+    <div class="hide p3-update shadow"><div class="message"></div></div>
+
+</div>
+
+
+</body>
+</html>

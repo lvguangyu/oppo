@@ -1,0 +1,184 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <!-- HTTP 1.1 -->
+    <meta http-equiv="pragma" content="no-cache">
+    <!-- HTTP 1.0 -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=1080,user-scalable=no">
+    <!-- Force latest IE rendering engine & Chrome Frame -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" href="http://img1.deexcul.com/oppo/static/js/swiper/swiper.min.css">
+    <script src="http://img1.deexcul.com/oppo/static/js/swiper/swiper.min.js"></script>
+
+    <script src="http://img1.deexcul.com/oppo/static/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://img1.deexcul.com/oppo/static/js/preloadjs-0.6.2.min.js"></script>
+    <script src="http://img1.deexcul.com/oppo/static/js/lazyload.min.js"></script>
+    <script src="config.js?v29"></script>
+    <script src="bundle.js?v29"></script>
+    <script src="js/app.js?v29"></script>
+
+    <title>OPPO</title>
+
+    <link href="css/app.css?v29" rel="stylesheet" type="text/css"/>
+</head>
+<body class="p2">
+
+<div id="app">
+    <div>
+        <div class="p2-up">
+            <div class="p2-up-rule" id="p2-show-rule">
+                <span>投票规则</span>
+            </div>
+            <p>十佳作品已出炉，最终大奖由你决定！<br>
+                来为你喜欢的作品投票，还能参与抽奖哦！</p>
+            <div class="p2-up-frame">
+                <ul id="p2-up-frame">
+                    <!--<li style="background-image:url('http://img1.deexcul.com/oppo/static/p2-pic1.jpg')">-->
+                        <!--<div class="btn"></div>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="p2-up-vote" id="p2-vote"></div>
+            <div class="p2-up-selected">
+                <p>已选择 <span class="p2-vote-selected">0</span> 份作品</p>
+            </div>
+        </div>
+
+        <div class="p2-bottom">
+            <div class="p2-up-rule" id="p2-show-draw">
+                <span>抽奖规则</span>
+            </div>
+
+            <div class="p2-pic2-winner">
+                <!-- Swiper -->
+                <div class="swiper-container" id="p2-winners-container">
+                    <div class="swiper-wrapper" id="p2-winners-swiper">
+                        <!--<div class="swiper-slide">-->
+                        <!--<p>-->
+                        <!--恭喜 13826019412<br>获得 一等奖 奖品-->
+                        <!--</p>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="p2-lottery">
+                <img src="" id="shan-img" style="display:none;" />
+                <img src="" id="sorry-img" style="display:none;" />
+                <div class="banner">
+                    <div class="turnplate" style="background-image:url(http://img1.deexcul.com/oppo/static/turnplate-bg.png?x-oss-process=style/png);background-size:100% 100%;">
+                        <canvas class="item" id="wheelcanvas" width="480px" height="480px"></canvas>
+                        <img class="pointer" src="http://img1.deexcul.com/oppo/static/turnplate-pointer.png?x-oss-process=style/png"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p2-pic2-selected">
+                <p>还剩 <span class="a1_draw_count">0</span> 次抽奖机会</p>
+            </div>
+
+            <div class="p2-my-award">
+                <span>我的奖品</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide p2-vote shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <p>1、请在十佳作品中为你喜欢的作品投票，一次可最多选择3部作品，一日限投一票，活动期间可每日参与投票。</p>
+                <p>2、投票成功即可获得一次转盘抽奖机会，每日投票成功后均可参与一次抽奖活动。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide p2-draw shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <p>参与页面内优秀作品投票即可获得一次抽奖机会。每天可以参与一次投票，并获得一次抽奖机会，抽奖机会当天有效，不可累加。所获奖品将在手写情书征集大赛结束后15个工作日内发放。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide p2-winner shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <ul id="mine-awards">
+                    <!--<li><div class="award" style="background-image: url('http://img1.deexcul.com/oppo/static/bg.png');"></div></li>-->
+                </ul>
+            </div>
+            <div class="p1-edit-address"></div>
+        </div>
+    </div>
+
+    <div class="hide p2-draw-winner shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <p class="award-title">恭喜您获得xxx奖品！</p>
+                <p class="line1">请在下方填写您的联系方式！</p>
+                <p class="line2">*请务必填写准确信息，<br>若工作人员无法联系到您，将视为主动弃奖。</p>
+
+                <div class="form">
+                    <div class="input">
+                        <input type="text" placeholder="OPPO账号" id="username" />
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="手机号码" id="mobile" />
+                    </div>
+
+                    <div class="submit"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide p2-edit-winner shadow">
+        <div class="message">
+            <div class="close"></div>
+            <div class="title"></div>
+            <div class="content">
+                <div class="form">
+                    <div class="input">
+                        <input type="text" placeholder="OPPO账号" id="username2" />
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="手机号码" id="mobile2" />
+                    </div>
+
+                    <div class="submit"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide p1-empty-username pop2 shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p1-empty-mobile pop2 shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p1-vote-first pop2 shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p1-nextday pop2 shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p1-no-winner pop2 shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p1-got-draw pop2 shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p1-error pop2 shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p1-success pop2 shadow"><div class="message"><div class="close"></div></div></div>
+    <div class="hide p1-login-first pop2 shadow"><div class="message"></div></div>
+    <div class="hide p1-update pop2 shadow"><div class="message"></div></div>
+</div>
+
+
+</body>
+</html>

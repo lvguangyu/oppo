@@ -1,0 +1,1615 @@
+@font-face {
+    /*font-family: xjlFont;
+    src: url(http://7xqoke.com1.z0.glb.clouddn.com/vanke-weiyuan/fonts/xjlFont.fon?#iefix);*/
+    /*src: url(../../fonts/helveticaneue/helveticaneue.eot?#iefix) format("eot"), url(../../fonts/helveticaneue/helveticaneue.woff) format("woff"), url(../../fonts/helveticaneue/helveticaneue.ttf) format("truetype"), url(../../fonts/helveticaneue/helveticaneue.svg#helveticaneue) format("svg")*/
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "AaHeiti",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+* {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+input, textarea {
+    background: transparent;
+    letter-spacing: 1px;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(0,0,0,0.5);
+}
+input:-ms-input-placeholder {
+    color: rgba(0,0,0,0.5);
+}
+input:-moz-placeholder {
+    color: rgba(0,0,0,0.5);
+}
+input::-moz-placeholder {
+    color: rgba(0,0,0,0.5);
+}
+.hide {
+    display: none;
+}
+
+.radio-group {  
+    display: -webkit-box;  
+    display: -webkit-flex;  
+    display: flex;  
+    -webkit-box-align: center;  
+    -webkit-align-items: center;  
+    align-items: center;  
+}  
+
+.radio-group .radio {  
+    -webkit-box-flex: 1;  
+    -webkit-flex: 1;  
+    flex: 1;  
+    display: -webkit-box;  
+    display: -webkit-flex;  
+    display: flex;  
+    -webkit-box-align: center;  
+    -webkit-align-items: center;  
+    align-items: center;  
+    position:relative;  
+}  
+
+.radio-group .radio input[type=radio] {  
+    -webkit-box-flex: 1;  
+    -webkit-flex: 1;  
+    flex: 1;  
+    outline:none;  
+    display: none;  
+}  
+
+.radio-group .radio .word {  
+    -webkit-box-flex: 84;  
+    -webkit-flex: 84;  
+    flex: 84;  
+}  
+
+.radio-group .radio .as-radio + label {  
+    -webkit-appearance: none;  
+    background-color: #fff;  
+    display: inline-block;  
+    position: relative;  
+    top: 0px;  
+    left: -10px;  
+    width: 31px;
+    height: 31px;
+    background: url('http://img1.deexcul.com/oppo/static/radio-default.png') no-repeat;
+}  
+
+.radio-group .radio .as-radio:checked + label:after {  
+    content: ' ';  
+    width: 31px;  
+    height: 31px;   
+    position: absolute;  
+    top: 0px;  
+    background: url('http://img1.deexcul.com/oppo/static/radio-selected.png') no-repeat;
+    left: 0px;  
+}
+
+.checkbox-group {  
+    display: -webkit-box;  
+    display: -webkit-flex;  
+    display: flex;  
+    -webkit-box-align: center;  
+    -webkit-align-items: center;  
+    align-items: center;  
+}  
+
+.checkbox-group .checkbox {  
+    -webkit-box-flex: 1;  
+    -webkit-flex: 1;  
+    flex: 1;  
+    display: -webkit-box;  
+    display: -webkit-flex;  
+    display: flex;  
+    -webkit-box-align: center;  
+    -webkit-align-items: center;  
+    align-items: center;  
+    position:relative;  
+}  
+
+.checkbox-group .checkbox input[type=checkbox] {  
+    -webkit-box-flex: 1;  
+    -webkit-flex: 1;  
+    flex: 1;  
+    outline:none;  
+    display: none;  
+}  
+
+.checkbox-group .checkbox .word {  
+    -webkit-box-flex: 84;  
+    -webkit-flex: 84;  
+    flex: 84;  
+}  
+
+.checkbox-group .checkbox .as-checkbox + label {  
+    -webkit-appearance: none;  
+    background-color: #fff;  
+    display: inline-block;  
+    position: relative;  
+    top: 2px;  
+    left: -10px;  
+    width: 31px;
+    height: 31px;
+    background: url('../images/p1-2_unchecked.png') no-repeat;
+}  
+
+.checkbox-group .checkbox .as-checkbox:checked + label:after {  
+    content: ' ';  
+    width: 31px;  
+    height: 31px;   
+    position: absolute;  
+    top: 2px;
+    background: url('../images/p1-2_check.png') no-repeat;
+    left: 0px;  
+} 
+
+
+.left{
+    float: left;
+    text-align: left;
+}
+.right{
+    float: right;
+    text-align: right;
+}
+
+#app {
+    position: relative;
+    text-align: center;
+    height: 100%;
+}
+
+.layout {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    bottom: auto;
+    width: 100%;
+}
+
+.shadow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.shadow .join-close {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../images/close.png');
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    right: 69px;
+    top: 69px;
+}
+.shadow .close {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../images/close.png');
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    right: 69px;
+    top: 69px;
+}
+
+.shadow .gray-close {
+    background-image: url('../images/gray-close.png');
+}
+
+.input {
+    width: 704px;
+    height: 109px;
+    position: relative;
+}
+/*.input + .input {*/
+    /*margin-top: 30px;*/
+/*}*/
+/*.input:nth-child(odd){*/
+    /*background:url('http://img1.deexcul.com/oppo/static/input-1.png') no-repeat;*/
+/*}*/
+/*.input:nth-child(even){*/
+    /*background:url('http://img1.deexcul.com/oppo/static/input-2.png') no-repeat;*/
+/*}*/
+.input input {
+    width: 600px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    color: #fff;
+    text-align: left;
+}
+.input input::-webkit-input-placeholder { /* WebKit browsers */
+    color:  #fff;
+    letter-spacing: 5px;
+}
+.input input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:  #fff;
+    letter-spacing: 5px;
+}
+.input input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:  #fff;
+    letter-spacing: 5px;
+}
+.input input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:  #fff;
+    letter-spacing: 5px;
+}
+body.p2 {
+    background: url('../images/p2/p2-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 4650px;
+}
+
+body.p3{
+    background: url('../images/p3/p3-1_bg.jpg') no-repeat;
+    height: 4500px;
+}
+
+img {
+    width: 100%;
+}
+
+.p1-1-1 {
+    background: url('../images/p1-2_bg.jpg') no-repeat;
+    width: 1080px;
+    height: 1920px;
+}
+
+.p1-1-1 .area1 {
+    width: 820px;
+    height: 1009px;
+    background: url('../images/p1-2_01.png') no-repeat;
+    top: 154px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+}
+.p1-1-1 .area1 p {
+    height: 600px;
+    width: 690px;
+    padding: 0 75px;
+    overflow: auto;
+    /*text-align: left;*/
+    /*color: #000000;*/
+    margin-top: 140px;
+    /*line-height: 60px;*/
+    /*letter-spacing: 5px;*/
+}
+.p1-1-1 .judge {
+    width: 280px;
+    height: 82px;
+    background: url("../images/p1-2_02.png") no-repeat;
+    margin-top: 50px;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.p1-1-1 .area2{
+    width: 704px;
+    min-height: 785px;
+    top: 1170px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+}
+.p1-1-1 .area2 .input:first-child {
+    background: url("../images/p1-2_phone-input.png") no-repeat;
+}
+/*.p1-1-1 .area2 .input:nth-child(2) {*/
+    /*background: url("../images/p1-2_very-code-input.png") no-repeat;*/
+/*}*/
+.p1-1-1 .area2 .input button {
+    border: none;
+    outline: none;
+    background: transparent;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    color: #fff;
+}
+.p1-1-1 .upload{
+    width: 375px;
+    height: 275px;
+    margin: 30px auto 0;
+    position: relative;
+    background: url('../images/p1-2_upload.png') no-repeat;
+}
+.p1-1-1 .upload input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.p1-1-1 .yes-author {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 180px;
+    top:360px;
+    background: url("../images/p1-2_yes.png") no-repeat;
+}
+
+.p1-1-1 .no-author {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 180px;
+    top:360px;
+    background: url("../images/p1-2_no.png") no-repeat;
+}
+
+.p1-1-1 .upload img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.p1-1-rule {
+    width: 300px;
+    margin: 0 auto;
+    /*padding-top: 30px;*/
+}
+.p1-1-1 .submit {
+    width: 420px;
+    height: 133px;
+    background: url('../images/p1-2_sumbit.png') no-repeat;
+    margin: 30px auto;
+}
+.p1-1-1 .p1-jury-container {
+    background: url('../images/p1-2_jury-bg.png') no-repeat;
+    width: 806px;
+    height: 891px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+}
+.p1-1-1 .swiper-container {
+    margin-top: 165px;
+    height: 697px;
+}
+.p1-jury-container .swiper-button-prev{
+    background: url('../images/p1-2_left-red.png') no-repeat;
+    width: 19px;
+    height: 34px;
+    left: 80px;
+    margin-top: -38px;
+}
+
+.p1-jury-container .swiper-button-next{
+    background: url('../images/p1-2_right-red.png') no-repeat;
+    width: 19px;
+    height: 34px;
+    right: 80px;
+    margin-top: -38px;
+    /*transform: rotate(180deg);*/
+}
+.p1-jury-container .swiper-pagination {
+    bottom: 90px;
+}
+.p1-jury-container .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+}
+.p1-jury-container .swiper-pagination-bullet-active {
+    background: #bd2121;
+}
+.p1-1-1 .message {
+    /*background: url('http://img1.deexcul.com/oppo/static/p1-popup1-bg.png') no-repeat;*/
+    width: 674px;
+    height: 559px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+}
+.p1-1-1 .message:after{
+    width: 674px;
+    height: 559px;
+    content: ' ';
+    display: block;
+}
+
+.p1-empty-username .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-empty-username.png') no-repeat;}
+.p1-empty-mobile .message:after{ background: url('../images/p-mobile-empty.png') no-repeat;}
+.p1-error .message:after{ background: url('../images/p1-2_join-error.png') no-repeat;}
+.p1-join-success .message:after{ background: url('../images/p1-2_join-success.png') no-repeat;}
+.p1-upload-error .message:after{ background: url('../images/p1-2_upload-error.png') no-repeat;}
+.p1-upload-max5m .message:after{ background: url('../images/p1-2_upload-max5m.png') no-repeat;}
+.p1-upload-max10m .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-upload-max10m.png') no-repeat;}
+.p1-upload-success .message:after{ background: url('../images/p1-2_upload-success.png') no-repeat;}
+.p1-empty-image .message:after{ background: url('../images/p1-empty-img.png') no-repeat;}
+.p1-empty-rule .message:after{ background: url('../images/p1-2_join-error.png') no-repeat;}
+.p1-login-first .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-login-first.png') no-repeat center;}
+.p1-update .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-update.png') no-repeat center;}
+.p1-author .message:after{ background: url('../images/p1-2_author.png') no-repeat center;}
+
+/*************p1 end**************************/
+
+/*************p2 start**************************/
+.p2 {
+    min-height: 3484px;
+}
+
+.p2-up {
+    background: url('../images/p2/p2-01.png') no-repeat;
+    background-position: top;
+    width: 1004px;
+    height: 1670px;
+    position: absolute;
+    top: 885px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 150px 36px 0;
+    text-align: center;
+}
+
+.p2-bottom {
+    background: url('../images/p2/p2-1_raffle.png') no-repeat;
+    background-position: top;
+    width: 1004px;
+    height: 1486px;
+    position: absolute;
+    top: 2764px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 150px 36px 0;
+}
+
+.p2-up-frame {
+    width: 668px;
+    height: 887px;
+    overflow: auto;
+    padding: 15px 27px;
+    position: absolute;
+    top: 290px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.p2-up-frame ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.p2-up-frame ul li {
+    height: 377px;
+    width: 666px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.p2-up-frame ul li .btn {
+    background-image: url('../images/p2/p2-1-unselected.png');
+    background-repeat: no-repeat;
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.p2-up-frame ul li .btn.checked{
+    background-image: url('../images/p2/p2-1-selected.png');
+}
+
+.p2-up-frame ul li + li {
+    margin-top: 10px;
+}
+
+.p2-up-rule {
+    width: 167px;
+    height: 38px;
+    position: absolute;
+    right: 113px;
+}
+
+#p2-show-rule {
+    background: url('../images/p2/p2-1_rule-text.png') no-repeat;
+}
+
+#p2-show-draw {
+    background: url('../images/p2/p2-1_raffle-rule-text.png') no-repeat;
+}
+
+/*.p2-up p {*/
+    /*font-size: 30px;*/
+    /*margin: 30px 0 0;*/
+    /*color: #000;*/
+    /*text-align: center;*/
+    /*letter-spacing: 5px;*/
+/*}*/
+
+.p2-up-selected {
+    position: absolute;
+    left: 50%;
+    top: 1258px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.p2-up-selected p {
+    font-size: 30px;
+    margin: 30px 0 0;
+    color: #000;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.p2-vote-selected {
+    color: #bd2121;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.p2-up-vote {
+    width: 655px;
+    height: 189px;
+    background-image: url('../images/p2/p2-1_vote.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 1369px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.p2-pic2-winner {
+    width: 723px;
+    height: 90px;
+    top: 225px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#p2-winners-container p {
+    margin: 15px 0 0 0;
+    padding: 0;
+    line-height: 40px;
+    color: #fff;
+}
+
+.p2-lottery {
+    position: absolute;
+    top: 400px;
+    width: 660px;
+    height: 660px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.p2-lottery .turnplate {
+    width: 100%;
+    height: 100%;
+}
+
+.p2-lottery .pointer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 200px;
+    height: 200px;
+}
+
+.p2-lottery .item {
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -238px 0 0 -240px;
+}
+
+.p2-pic2-selected {
+    position: absolute;
+    /*bottom: 124px;*/
+    top: 1068px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.p2-pic2-selected p {
+    font-size: 30px;
+    margin: 30px 0 0;
+    color: #000;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.p2-pic2-selected .a1_draw_count {
+    color: #bd2121;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.p2-up-raffle {
+    width: 655px;
+    height: 189px;
+    background-image: url('../images/p2/p2-1_raffle-btn.png');
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 1180px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.p2-my-award {
+    color: #bd2121;
+    position: absolute;
+    top: 1380px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.p2-my-award span {
+    text-decoration: underline;
+    /*line-height: 40px;*/
+    /*font-size: 40px;*/
+    display: inline-block;
+}
+
+/*p2 弹框*/
+
+/*投票规则弹框*/
+.p2-vote .message {
+    background: url('../images/p2/p2-1_vote-model.png') no-repeat;
+    width: 805px;
+    height: 942px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    position: absolute;
+}
+/*抽奖规则弹框*/
+.p2-draw .message {
+    background: url('../images/p2/p2-1_raffle-model.png') no-repeat;
+    width: 805px;
+    height: 942px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    position: absolute;
+}
+
+/*************操作提示弹框*****************************************/
+.p2 .pop2 .message {
+    width: 784px;
+    height: 559px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+}
+.p2 .pop2 .message:after{
+    width: 784px;
+    height: 559px;
+    content: ' ';
+    display: block;
+}
+/*未选择作品规则弹框*/
+.p2-empty-vote .message:after{ background: url('../images/p2/p2-1_empty-vote.png') no-repeat;}
+/*网络错误弹框, 手机号为空*/
+.p2 .p1-empty-mobile .message,
+.p2 .p1-error .message {
+    width: 674px;
+    height: 559px;
+}
+.p2 .p1-empty-mobile .message:after,
+.p2 .p1-error .message:after {
+    width: 674px;
+    height: 559px;
+}
+
+/*投票成功弹框*/
+.p2-got-draw-first .message:after{ background: url('../images/p2/p2-1_got-draw-first.png') no-repeat;}
+
+/*请先投票*/
+.p2-vote-first .message:after{ background: url('../images/p2/p2-1_vote-first.png') no-repeat;}
+
+/*未中奖*/
+.p1-no-winner .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-no-winner.png') no-repeat;}
+
+/*机会用光*/
+.p2-nextday .message:after{ background: url('../images/p3/p3-1_nextday.png') no-repeat;}
+
+/*.p2-got-draw .message:after{ background: url('../images/p2/p2-1_got-draw.png') no-repeat;}*/
+/*.p1-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-success.png') no-repeat;}*/
+/*.p2 .p1-empty-username .message:after{ background-position: center -50px;}*/
+/*.p2 .p1-empty-mobile .message:after{ background-position: center -50px;}*/
+/*.p2 .p1-success .message:after{ background-position: center center; display: block;}*/
+
+/************p2 end********************************/
+
+/************p3 start********************************/
+.p3 {
+    color: #de6593;
+}
+.p3 p {
+    font-size: 30px;
+    margin: 30px 0 0;
+    text-align: center;
+    color: #000;
+    letter-spacing: 5px;
+}
+
+.p3-pic1 {
+    background: url('../images/p3/p3-1-01.png') no-repeat;
+    background-position: top;
+
+    width: 1004px;
+    height: 1196px;
+    position: absolute;
+    top: 909px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+
+    padding: 145px 44px 0;
+
+    text-align: center;
+}
+.p3-pic1-confession {
+    width: 633px;
+    height: 520px;
+    top: 290px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    background: #fff;
+    border-radius: 26px;
+    padding: 20px 87px;
+}
+.p3-pic1-confession .swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 633px;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 26px;
+}
+
+.p3-pic1-confession .swiper-button-prev{
+    background: url('../images/p3/p3-1_left.png') no-repeat;
+    width: 68px;
+    height: 68px;
+    left: -90px;
+    margin-top: -34px;
+}
+
+.p3-pic1-confession .swiper-button-next{
+    background: url('../images/p3/p3-1_left.png') no-repeat;
+    width: 68px;
+    height: 68px;
+    right: -90px;
+    margin-top: -34px;
+    transform: rotate(180deg);
+}
+
+.p3-pic1-confession .zan{
+    background: url('../images/p3/p3-1_zan-default.png') no-repeat #fff center;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #de6593;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+}
+.p3-pic1-confession .zan.checked{
+    background-image: url('../images/p3/p3-1_zan-checked.png');
+}
+
+.p3-pic2 {
+    background: url('../images/p3/p3-1-02.png') no-repeat;
+    background-position: top;
+
+    width: 1008px;
+    height: 1580px;
+    position: absolute;
+    top: 2276px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+
+    padding: 145px 44px 0;
+
+    text-align: center;
+}
+
+.p3-pic2-winner {
+    width: 723px;
+    height: 90px;
+    top: 270px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*background: #fff;*/
+    /*border-radius: 20px;*/
+}
+
+#p3-winners-container p, #p2-winners-container p {
+    margin: 15px 0 0 0;
+    padding: 0;
+    line-height: 40px;
+    color: #fff;
+}
+
+.p3-pic2-award {
+    width: 732px;
+    height: 474px;
+    top: 500px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*background: #fff;*/
+    /*border-radius: 26px;*/
+    padding: 20px 40px;
+}
+
+#p3-awards-swiper {
+    padding-bottom: 20px;
+    height: calc(100% - 20px);
+}
+
+.p3-pic2-award .swiper-slide {
+    width: 335px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 26px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.p3-pic2-award .swiper-slide:first-child {
+    margin-left: 0px;
+}
+
+.p3-pic2-draw {
+    width: 655px;
+    height: 189px;
+    top: 1261px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url('../images/p3/p3-1_draw.png') no-repeat;
+    background-position: top;
+    z-index: 2;
+}
+
+.p3-pic2-selected {
+    position: absolute;
+    top: 1150px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.b1_draw_count {
+    color: #bd2121;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#p3-awards-container .swiper-scrollbar-drag {
+    background: #de6593;
+}
+
+.p3-my-award {
+    position: absolute;
+    top: 1462px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.p3-my-award span {
+    text-decoration: underline;
+    line-height: 40px;
+    /*font-size: 40px;*/
+    display: inline-block;
+    color: #bd2121;
+}
+
+.p3-pic3 {
+    background: url('http://img1.deexcul.com/oppo/static/p3-pic3.png') no-repeat;
+    background-position: top;
+
+    width: 763px;
+    height: 876px;
+    position: absolute;
+    top: 2976px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+
+    padding: 61px 44px 0;
+
+    text-align: center;
+}
+
+.p3-pic3-message {
+    width: 649px;
+    height: 401px;
+    top: 201px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    background: #fff;
+    border-radius: 26px;
+    padding: 20px 40px;
+}
+.p3-pic3-message ul{
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: left;
+}
+.p3-pic3-message ul li{
+    line-height: 34px;
+}
+.p3-pic3-message ul li + li{
+    border-top: 1px dashed #f7e3e7;
+    margin-top: 8px;
+    padding-top: 8px;
+}
+.p3-pic3-message ul li .title{
+    font-size: 36px;
+}
+.p3-pic3-message ul li p{
+    text-align: left;
+    margin: 0;
+    height: 46px;
+    line-height: 46px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.p3 .pagination {
+    position: absolute;
+    top: 360px;
+    left: 45px;
+    right: 45px;
+    height: 70px;
+    line-height: 70px;
+}
+.p3 .pagination a, .p3 .pagination a:hover{
+    color: #de6593;
+    text-decoration: none;
+}
+
+.p3 .pagination span {
+    display: inline-block;
+}
+.p3 .pagination span + span {
+    margin-left: 10px;
+}
+
+.p3-pic3-message .button-prev{
+    position: absolute;
+    background: url('http://img1.deexcul.com/oppo/static/p3-j-small.png') no-repeat;
+    width: 18px;
+    height: 31px;
+    left: 0;
+    bottom: 20px;
+}
+
+.p3-pic3-message .button-next{
+    position: absolute;
+    background: url('http://img1.deexcul.com/oppo/static/p3-j-small.png') no-repeat;
+    width: 18px;
+    height: 31px;
+    right: 0;
+    bottom: 20px;
+    transform: rotate(180deg);
+}
+
+.p3-pic3-message .disabled{
+    opacity: 0.5;
+}
+
+.p3-pic3-input{
+    width: 424px;
+    height: 44px;
+    top: 705px;
+    position: absolute;
+    left: 64px;
+
+    background: #fff;
+    border-radius: 26px;
+    padding: 9px 40px;
+}
+.p3-pic3-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    color: #de6593;
+}
+
+.p3-pic3-input input::-webkit-input-placeholder {
+    color: #de6593;
+    opacity: 0.65;
+}
+.p3-pic3-input input:-ms-input-placeholder {
+    color: #de6593;
+    opacity: 0.65;
+}
+.p3-pic3-input input:-moz-placeholder {
+    color: #de6593;
+    opacity: 0.65;
+}
+.p3-pic3-input input::-moz-placeholder {
+    color: #de6593;
+    opacity: 0.65;
+}
+
+.p3-pic3-sent {
+    width: 201px;
+    height: 85px;
+    top: 685px;
+    position: absolute;
+    right: 60px;
+    background: url('http://img1.deexcul.com/oppo/static/p3-sent.png') no-repeat;
+    background-position: top;
+    z-index: 2;
+}
+
+#show-rule {
+    width: 168px;
+    height: 38px;
+    position: absolute;
+    right: 113px;
+    padding-top: 30px;
+    background: url('../images/p3/p3-1-rule-text.png') no-repeat;
+}
+#show-draw {
+    width: 168px;
+    height: 38px;
+    position: absolute;
+    right: 113px;
+    padding-top: 30px;
+    background: url('../images/p3/p3-1-raffle-rule-text.png') no-repeat;
+}
+
+
+.p3-text-right span {
+    text-decoration: underline;
+    line-height: 40px;
+    font-size: 40px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+
+
+/*规则说明弹框*/
+.p3-rule .content {
+    background: url('../images/p3/p3-1_rule-model.png') no-repeat;
+    width: 805px;
+    height: 942px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    position: absolute;
+}
+/*抽奖规则弹框*/
+.p3-draw .content {
+    background: url('../images/p3/p3-1_draw-model.png') no-repeat;
+    width: 805px;
+    height: 942px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    position: absolute;
+}
+
+p.award-title {
+    font-size: 40px;
+}
+p.line1 {
+    font-size: 28px;
+}
+
+p.line2 {
+    color: #fff;
+    margin-top: 50px!important;
+    font-size: 26px;
+}
+
+.p3 .p3-ajaxing .message {
+    background: transparent;
+    width: 571px;
+    height: 542px;
+}
+
+.p3 .preview .message {
+    background: transparent;
+    width: 100%;
+    height: auto;
+}
+.p3 .preview img {
+    width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.p3 .preview .message:after{
+    display: none;
+}
+
+.p3 .message {
+    /*background: url('http://img1.deexcul.com/oppo/static/p2-popup1-bg.png') no-repeat;*/
+    width: 784px;
+    height: 559px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+}
+.p3 .message:after{
+    width: 784px;
+    height: 559px;
+    content: ' ';
+    display: block;
+}
+
+/**p2,p3 我的奖品弹框**/
+.p2 .p2-winner .message,
+.p3 .p3-winner .message {
+    background: url('../images/p3/p3-1_my-prize-bg.png') no-repeat;
+    width: 805px;
+    height: 1132px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+}
+
+.p2 .p2-winner .message:after,
+.p3 .p3-winner .message:after{
+    width: 805px;
+    height: 1132px;
+    content: ' ';
+    display: block;
+}
+
+.p2 .p2-winner .message .content,
+.p3 .p3-winner .message .content {
+    width: auto;
+    padding: 0;
+    left: 56px;
+    right: 36px;
+    height: 659px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.p2 .p2-winner .message .content ul,
+.p3 .p3-winner .message .content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px 0 0;
+}
+
+.p2 .p2-winner .message .content ul li,
+.p3 .p3-winner .message .content ul li {
+    height: 324px;
+    padding: 18px 50px;
+    border-radius: 30px;
+    margin: 0;
+}
+.p2 .p2-winner .message .content ul li + li,
+.p3 .p3-winner .message .content ul li + li {
+    margin-top: 18px;
+}
+
+.p2-winner .content .award,
+.p3-winner .content .award {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+
+.p2-edit-address,
+.p3-edit-address {
+    position: fixed;
+    bottom: 90px;
+    width: 317px;
+    height: 66px;
+    left: 50%;
+    margin-left: -158px;
+    background: url('http://img1.deexcul.com/oppo/static/p3-edit-address.png') no-repeat;
+}
+
+/*修改邮寄地址弹框, 中奖弹框*/
+.p2-draw-winner .message , .p2-edit-draw-winner .message,
+.p3-draw-winner .message , .p3-edit-draw-winner .message{
+    background: url('../images/p3/p3-1_winner-bg.png') no-repeat;
+    width: 805px;
+    height: 1132px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+}
+.p2 .p2-draw-winner .message:after, .p2 .p2-edit-draw-winner .message,
+.p3 .p3-draw-winner .message:after, .p3 .p3-edit-draw-winner .message{
+    width: 805px;
+    height: 1132px;
+    content: ' ';
+    display: block;
+}
+
+.p2 .message .content,
+.p3 .message .content{
+    position: absolute;
+    width: auto;
+    top: 220px;
+    padding: 0 70px;
+}
+
+.p2 .message .content p,
+.p3 .message .content p {
+    text-align: center;
+    margin: 0;
+    line-height: 60px;
+}
+.p2 .message .content p + p,
+.p3 .message .content p + p{
+    margin-top: 20px;
+}
+
+.p2-draw .content p,
+.p3-draw .content p {
+    text-indent: 54px;
+}
+
+.p2 .p2-draw-winner .message .content,
+.p3 .p3-draw-winner .message .content {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    top: 364px;
+}
+.p2 .p2-draw-winner .message .content p, .p2 .p2-edit-draw-winner .message .content p
+.p3 .p3-draw-winner .message .content p, .p3 .p3-edit-draw-winner .message .content p{
+    text-align: center;
+    margin: 0;
+}
+.p2-draw-winner .form, .p2-edit-draw-winner .form,
+.p3-draw-winner .form, .p3-edit-draw-winner .form{
+    position: absolute;
+    /*top: 580px;*/
+    left: 100px;
+    right: 100px;
+    width: 594px;
+}
+.p2-draw-winner .form input,
+.p3-draw-winner .form input {
+    width: 594px;
+    height: 109px;
+    text-align: center;
+}
+.p2-draw-winner .form .mobile-input, .p2-edit-draw-winner .form .mobile-input,
+.p3-draw-winner .form .mobile-input, .p3-edit-draw-winner .form .mobile-input {
+    width: 594px;
+    height: 109px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url("../images/p3/p3-1_phone-input.png") no-repeat;
+}
+.p2-draw-winner .form .user-input, .p2-edit-draw-winner .form .user-input,
+.p3-draw-winner .form .user-input, .p3-edit-draw-winner .form .user-input {
+    width: 594px;
+    height: 109px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url("../images/p3/p3-1_user-input.png") no-repeat;
+}
+.p2-draw-winner .form .address-input, .p2-edit-draw-winner .form .address-input,
+.p3-draw-winner .form .address-input, .p3-edit-draw-winner .form .address-input {
+    width: 594px;
+    height: 109px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url("../images/p3/p3-1_address-input.png") no-repeat;
+}
+.p2-draw-winner .form .submit, .p2-edit-draw-winner .form .submit,
+.p3-draw-winner .form .submit, .p3-edit-draw-winner .form .submit{
+    width: 502px;
+    height: 137px;
+    background: url('../images/p3/p3-submit.png') no-repeat;
+    margin: 90px auto 0;
+}
+
+.p3-empty-mobile .message , .p3-empty-mobile .message:after{
+    width: 674px;
+    height: 559px;
+}
+
+.p3-message-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-message-success.png') no-repeat;}
+.p3-nextday .message:after{ background: url('../images/p3/p3-1_nextday.png') no-repeat;}
+.p3-error .message:after{ background: url('../images/p1-2_upload-error.png') no-repeat;}
+
+.p3-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-success.png') no-repeat;}
+.p3-got-draw .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-got-draw.png') no-repeat;}
+.p3-praise-first .message:after{ background: url('../images/p3/p3-1_praise-first.png') no-repeat;}
+.p3-try-tomorrow .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-try-tomorrow.png') no-repeat;}
+.p3-comment-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-comment-success.png') no-repeat;}
+.p3-error1 .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-error1.png') no-repeat;}
+.p3-no-winner .message:after{ background: url('../images/p3/p3-1_no-winner.png') no-repeat;}
+
+/*.p3-ajaxing .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-ajaxing.png') no-repeat;}*/
+.p3-ajaxing .message:after{ background: transparent;}
+
+/*.p3-empty-username .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-empty-username.png') no-repeat;}*/
+.p3-empty-mobile .message:after{ background: url('../images/p-mobile-empty.png') no-repeat;}
+.p3-empty-name .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-empty-name.png') no-repeat;}
+.p3-empty-address .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-empty-address.png') no-repeat;}
+.p3-login-first .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-login-first.png') no-repeat center 170px ;}
+.p3-update .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-update.png') no-repeat center 170px ;}
+
+
+.very-code-model .message {
+    width: 799px;
+    height: 859px;
+    background: url('../images/login-bg.png');
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+}
+.very-code-model .message .content {
+    width: 660px;
+    left: 50%;
+    top: 450px;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+}
+
+.very-code-model .very-code-mobile {
+    width: 660px;
+    height: 97px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url("../images/phone-input.png");
+}
+
+
+.very-code-model .very-code-code {
+    width: 660px;
+    height: 97px;
+    margin: 20px auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url("../images/very-code-input.png");
+}
+
+.very-code-model input {
+    padding-left: 50px;
+}
+.very-code-model .input button {
+    border: none;
+    outline: none;
+    background: transparent;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    color: #fff;
+    letter-spacing: 4px;
+}
+.very-code-model .submit {
+    width: 420px;
+    height: 133px;
+    position: relative;
+    left: 50%;
+    margin-top: 40px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url("../images/login-btn.png");
+}
+.very-code-model .submit.disabled {
+    width: 420px;
+    height: 133px;
+    background: url("../images/login-btn-gray.png");
+}
+
+.error-code .message {
+    background: url('../images/p-send-code-error.png') no-repeat;
+    width: 674px;
+    height: 559px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    z-index: 100;
+}
+/*p-send-code-success.png*/
+
+.error-code .message:after{
+    width: 674px;
+    height: 559px;
+    content: ' ';
+    display: block;
+}
+.success-code .message {
+    background: url('../images/p-send-code-success.png') no-repeat;
+    width: 674px;
+    height: 559px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    z-index: 100;
+}
+/*p-send-code-success.png*/
+
+.success-code .message:after{
+    width: 674px;
+    height: 559px;
+    content: ' ';
+    display: block;
+}
+
+.empty-mobile .message {
+    background: url('../images/p-mobile-empty.png') no-repeat;
+    width: 674px;
+    height: 559px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    z-index: 100;
+}
+/*p-send-code-success.png*/
+
+.empty-mobile .message:after{
+    width: 674px;
+    height: 559px;
+    content: ' ';
+    display: block;
+}
+.error-network .message {
+    background: url('../images/p1-2_join-error.png') no-repeat;
+    width: 674px;
+    height: 559px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    position: fixed;
+    z-index: 100;
+}
+.error-network  .message:after{
+    width: 674px;
+    height: 559px;
+    content: ' ';
+    display: block;
+}
+
+
