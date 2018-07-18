@@ -304,11 +304,11 @@ function initP1() {
     });
     $('.p1-author .yes-author').click(function () {
         $('.p1-author').fadeOut();
-        ajaxSubmitP1(true);
+        ajaxSubmitP1(1);
     });
     $('.p1-author .no-author').click(function () {
         $('.p1-author').fadeOut();
-        ajaxSubmitP1(false);
+        ajaxSubmitP1(0);
     });
 
     $("#upload").on("change", function () {
