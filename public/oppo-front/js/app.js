@@ -417,7 +417,7 @@ function p3Awards() {
             tar.html('');
             var list = [];
             $.each(res.data, function (i, row) {
-                list.push('<div class="swiper-slide lazyload" data-src="' + row.url + '" style="background-image:url(' + row.url + '?x-oss-process=style/mini)"></div>')
+                list.push('<div class="swiper-slide lazyload" data-src="' + row.url + '" style="background-image:url(' + row.url + ')"></div>')
             });
 
             tar.html(list.join(''));
@@ -530,7 +530,7 @@ function p3WallProductions() {
         if (res.code === 200 && res.data.length > 0) {
             var list = [];
             $.each(res.data, function (i, row) {
-                list.push('<div class="swiper-slide lazyload" data-url="' + row.url + '" data-src="' + row.url + '" style="background-image:url(' + row.url + '?x-oss-process=style/minipng)"><div class="zan ' + (row.praised ? 'checked' : '') + '" data-id="' + row.id + '"></div></div>')
+                list.push('<div class="swiper-slide lazyload" data-url="' + row.url + '" data-src="' + row.url + '" style="background-image:url(' + row.url + ')"><div class="zan ' + (row.praised ? 'checked' : '') + '" data-id="' + row.id + '"></div></div>')
             });
             console.log(list);
             $('#p3-confession-swiper').html(list.join(''));
