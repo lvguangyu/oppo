@@ -56,11 +56,11 @@ function ajaxUpload(data, obj) {
     });
 }
 
-function ajaxSubmitP1() {
+function ajaxSubmitP1(isAuthor) {
     var data = {
-        oppo_id: $('#mobile').val().trim(),
+        oppo_id: $user.oppoId,
         mobile: $('#mobile').val().trim(),
-        // is_up_wall: $('[name="show"]:checked').val(),
+        is_up_wall: isAuthor,
         url: $('#upload_url').attr('src'),
         token: $user.token,
     };
@@ -304,10 +304,11 @@ function initP1() {
     });
     $('.p1-author .yes-author').click(function () {
         $('.p1-author').fadeOut();
-        ajaxSubmitP1();
+        ajaxSubmitP1(true);
     });
     $('.p1-author .no-author').click(function () {
         $('.p1-author').fadeOut();
+        ajaxSubmitP1(false);
     });
 
     $("#upload").on("change", function () {
@@ -409,14 +410,6 @@ function loadComment(page) {
 }
 
 function p3Awards() {
-    var swiper = new Swiper('#p3-awards-container', {
-        scrollbar: '.swiper-scrollbar',
-        scrollbarHide: true,
-        slidesPerView: 'auto',
-        // centeredSlides: true,
-        spaceBetween: 8,
-        grabCursor: true
-    });
     $.get(config.api.award, {'token': $user.token}, function (res) {
         console.log(res);
         var tar = $('#p3-awards-swiper');
@@ -533,7 +526,7 @@ function p3WallMineAwards() {
 // 优秀作品展示，点赞区
 function p3WallProductions() {
     $.get(config.api.wallProduction, {'token': $user.token}, function (res) {
-        console.log(res);
+        // console.log(res);
         if (res.code === 200 && res.data.length > 0) {
             var list = [];
             $.each(res.data, function (i, row) {
