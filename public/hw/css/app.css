@@ -286,11 +286,37 @@ body.p3{
 img {
     width: 100%;
 }
+.p1-top {
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-1_01.jpg') no-repeat;
+    width: 1080px;
+    height: 2765px;
+}
+.p1-button {
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-1_submit.jpg') no-repeat;
+    width: 1080px;
+    height: 236px;
+}
+.p1-bottom {
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-1_03.jpg') no-repeat;
+    width: 1080px;
+    height: 2078px;
+}
 
 .p1-1-1 {
     background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-2_bg.jpg') no-repeat;
     width: 1080px;
     height: 1920px;
+}
+.p1-1-1 .close {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('http://fonts.b0.upaiyun.com/font-activity/images/close.png');
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    right: 69px;
+    top: 69px;
 }
 
 .p1-1-1 .area1 {
@@ -472,10 +498,10 @@ img {
 .p1-upload-max10m .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-upload-max10m.png') no-repeat;}
 .p1-upload-success .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-2_upload-success.png') no-repeat;}
 .p1-empty-image .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-empty-img.png') no-repeat;}
-.p1-empty-rule .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p1-empty-rule.png') no-repeat;}
+.p1-empty-rule .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-empty-rule.png') no-repeat;}
 .p1-login-first .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-login-first.png') no-repeat center;}
 .p1-update .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-update.png') no-repeat center;}
-.p1-author .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p1-2_author.png') no-repeat center;}
+.p1-author .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-2_author.png') no-repeat center;}
 
 /*************p1 end**************************/
 
@@ -485,7 +511,7 @@ img {
 }
 
 .p2-up {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-01.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-01.png') no-repeat;
     background-position: top;
     width: 1004px;
     height: 1670px;
@@ -500,7 +526,7 @@ img {
 }
 
 .p2-bottom {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_raffle.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_raffle.png') no-repeat;
     background-position: top;
     width: 1004px;
     height: 1486px;
@@ -541,7 +567,7 @@ img {
 }
 
 .p2-up-frame ul li .btn {
-    background-image: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1-unselected.png');
+    background-image: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1-unselected.png');
     background-repeat: no-repeat;
     width: 43px;
     height: 43px;
@@ -550,7 +576,7 @@ img {
     right: 5px;
 }
 .p2-up-frame ul li .btn.checked{
-    background-image: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1-selected.png');
+    background-image: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1-selected.png');
 }
 
 .p2-up-frame ul li + li {
@@ -565,11 +591,11 @@ img {
 }
 
 #p2-show-rule {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_rule-text.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_rule-text.png') no-repeat;
 }
 
 #p2-show-draw {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_raffle-rule-text.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_raffle-rule-text.png') no-repeat;
 }
 
 /*.p2-up p {*/
@@ -606,7 +632,7 @@ img {
 .p2-up-vote {
     width: 655px;
     height: 189px;
-    background-image: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_vote.png');
+    background-image: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_vote.png');
     background-repeat: no-repeat;
     position: absolute;
     top: 1369px;
@@ -690,7 +716,7 @@ img {
 .p2-up-raffle {
     width: 655px;
     height: 189px;
-    background-image: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_raffle-btn.png');
+    background-image: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_raffle-btn.png');
     background-repeat: no-repeat;
 
     position: absolute;
@@ -720,7 +746,7 @@ img {
 
 /*投票规则弹框*/
 .p2-vote .message {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_vote-model.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_vote-model.png') no-repeat;
     width: 805px;
     height: 942px;
     top: 50%;
@@ -732,7 +758,7 @@ img {
 }
 /*抽奖规则弹框*/
 .p2-draw .message {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_raffle-model.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_raffle-model.png') no-repeat;
     width: 805px;
     height: 942px;
     top: 50%;
@@ -760,7 +786,7 @@ img {
     display: block;
 }
 /*未选择作品规则弹框*/
-.p2-empty-vote .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_empty-vote.png') no-repeat;}
+.p2-empty-vote .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_empty-vote.png') no-repeat;}
 /*网络错误弹框, 手机号为空*/
 .p2 .p1-empty-mobile .message,
 .p2 .p1-error .message {
@@ -774,18 +800,18 @@ img {
 }
 
 /*投票成功弹框*/
-.p2-got-draw-first .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_got-draw-first.png') no-repeat;}
+.p2-got-draw-first .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_got-draw-first.png') no-repeat;}
 
 /*请先投票*/
-.p2-vote-first .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_vote-first.png') no-repeat;}
+.p2-vote-first .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_vote-first.png') no-repeat;}
 
 /*未中奖*/
-.p1-no-winner .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_no-winner.png') no-repeat;}
+.p1-no-winner .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_no-winner.png') no-repeat;}
 
 /*机会用光*/
-.p2-nextday .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_nextday.png') no-repeat;}
+.p2-nextday .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_nextday.png') no-repeat;}
 
-/*.p2-got-draw .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_got-draw.png') no-repeat;}*/
+/*.p2-got-draw .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_got-draw.png') no-repeat;}*/
 /*.p1-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p1-success.png') no-repeat;}*/
 /*.p2 .p1-empty-username .message:after{ background-position: center -50px;}*/
 /*.p2 .p1-empty-mobile .message:after{ background-position: center -50px;}*/
@@ -806,7 +832,7 @@ img {
 }
 
 .p3-pic1 {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1-01.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1-01.png') no-repeat;
     background-position: top;
 
     width: 1004px;
@@ -845,7 +871,7 @@ img {
 }
 
 .p3-pic1-confession .swiper-button-prev{
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_left.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_left.png') no-repeat;
     width: 68px;
     height: 68px;
     left: -90px;
@@ -853,7 +879,7 @@ img {
 }
 
 .p3-pic1-confession .swiper-button-next{
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_left.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_left.png') no-repeat;
     width: 68px;
     height: 68px;
     right: -90px;
@@ -862,7 +888,7 @@ img {
 }
 
 .p3-pic1-confession .zan{
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_zan-default.png') no-repeat #fff center;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_zan-default.png') no-repeat #fff center;
     width: 84px;
     height: 84px;
     border-radius: 50%;
@@ -872,11 +898,11 @@ img {
     right: 14px;
 }
 .p3-pic1-confession .zan.checked{
-    background-image: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_zan-checked.png');
+    background-image: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_zan-checked.png');
 }
 
 .p3-pic2 {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1-02.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1-02.png') no-repeat;
     background-position: top;
 
     width: 1008px;
@@ -963,7 +989,7 @@ img {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_draw.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_draw.png') no-repeat;
     background-position: top;
     z-index: 2;
 }
@@ -1157,7 +1183,7 @@ img {
     position: absolute;
     right: 113px;
     padding-top: 30px;
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1-rule-text.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1-rule-text.png') no-repeat;
 }
 #show-draw {
     width: 168px;
@@ -1165,7 +1191,7 @@ img {
     position: absolute;
     right: 113px;
     padding-top: 30px;
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1-raffle-rule-text.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1-raffle-rule-text.png') no-repeat;
 }
 
 
@@ -1181,7 +1207,7 @@ img {
 
 /*规则说明弹框*/
 .p3-rule .content {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_rule-model.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_rule-model.png') no-repeat;
     width: 805px;
     height: 942px;
     top: 50%;
@@ -1193,7 +1219,7 @@ img {
 }
 /*抽奖规则弹框*/
 .p3-draw .content {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_draw-model.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_draw-model.png') no-repeat;
     width: 805px;
     height: 942px;
     top: 50%;
@@ -1261,7 +1287,7 @@ p.line2 {
 /**p2,p3 我的奖品弹框**/
 .p2 .p2-winner .message,
 .p3 .p3-winner .message {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_my-prize-bg.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_my-prize-bg.png') no-repeat;
     width: 805px;
     height: 1132px;
     top: 50%;
@@ -1327,13 +1353,13 @@ p.line2 {
     height: 60px;
     left: 50%;
     margin-left: -106px;
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-change-address.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address.png') no-repeat;
 }
 
 /*修改邮寄地址弹框, 中奖弹框*/
 .p2-draw-winner .message ,
 .p3-draw-winner .message{
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_winner-bg.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_winner-bg.png') no-repeat;
     width: 805px;
     height: 1132px;
     top: 50%;
@@ -1344,7 +1370,7 @@ p.line2 {
 }
 .p2-edit-draw-winner .message,
 .p3-edit-draw-winner .message {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-change-address-bg.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address-bg.png') no-repeat;
     width: 805px;
     height: 1132px;
     top: 50%;
@@ -1429,7 +1455,7 @@ p.line2 {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: url("http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_phone-input.png") no-repeat;
+    background: url("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_phone-input.png") no-repeat;
 }
 .p2-draw-winner .form .user-input, .p2-edit-draw-winner .form .user-input,
 .p3-draw-winner .form .user-input, .p3-edit-draw-winner .form .user-input {
@@ -1438,7 +1464,7 @@ p.line2 {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: url("http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_user-input.png") no-repeat;
+    background: url("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_user-input.png") no-repeat;
 }
 .p2-draw-winner .form .address-input, .p2-edit-draw-winner .form .address-input,
 .p3-draw-winner .form .address-input, .p3-edit-draw-winner .form .address-input {
@@ -1447,20 +1473,20 @@ p.line2 {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: url("http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_address-input.png") no-repeat;
+    background: url("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_address-input.png") no-repeat;
 }
 .p2-draw-winner .form .submit,
 .p3-draw-winner .form .submit{
     width: 502px;
     height: 137px;
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-submit.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-submit.png') no-repeat;
     margin: 90px auto 0;
 }
 .p2-edit-draw-winner .form .submit,
 .p3-edit-draw-winner .form .submit {
     width: 502px;
     height: 137px;
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-submit.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-submit.png') no-repeat;
     margin: 110px auto 0;
 }
 
@@ -1470,21 +1496,21 @@ p.line2 {
 }
 
 .p3-message-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-message-success.png') no-repeat;}
-.p3-nextday .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_nextday.png') no-repeat;}
-.p3-error .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p1-2_upload-error.png') no-repeat;}
+.p3-nextday .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_nextday.png') no-repeat;}
+.p3-error .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-2_upload-error.png') no-repeat;}
 
 .p3-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-success.png') no-repeat;}
-.p3-got-draw .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p2/p2-1_got-draw-first.png') no-repeat;}.p3-praise-first .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_praise-first.png') no-repeat;}
+.p3-got-draw .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_got-draw-first.png') no-repeat;}.p3-praise-first .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_praise-first.png') no-repeat;}
 .p3-try-tomorrow .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-try-tomorrow.png') no-repeat;}
 .p3-comment-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-comment-success.png') no-repeat;}
 .p3-error1 .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-error1.png') no-repeat;}
-.p3-no-winner .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p3/p3-1_no-winner.png') no-repeat;}
+.p3-no-winner .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_no-winner.png') no-repeat;}
 
 /*.p3-ajaxing .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-ajaxing.png') no-repeat;}*/
 .p3-ajaxing .message:after{ background: transparent;}
 
 /*.p3-empty-username .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-empty-username.png') no-repeat;}*/
-.p3-empty-mobile .message:after{ background: url('http://upaicdn.xinmei365.com/font-activity/images/p-mobile-empty.png') no-repeat;}
+.p3-empty-mobile .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p-mobile-empty.png') no-repeat;}
 .p3-empty-name .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-empty-name.png') no-repeat;}
 .p3-empty-address .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-empty-address.png') no-repeat;}
 .p3-login-first .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-login-first.png') no-repeat center 170px ;}
@@ -1494,7 +1520,7 @@ p.line2 {
 .very-code-model .message {
     width: 799px;
     height: 859px;
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/login-bg.png');
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/login-bg.png');
     top: 50%;
     left: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
@@ -1516,7 +1542,7 @@ p.line2 {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: url("http://upaicdn.xinmei365.com/font-activity/images/phone-input.png");
+    background: url("http://fonts.b0.upaiyun.com/font-activity/images/phone-input.png");
 }
 
 
@@ -1531,7 +1557,7 @@ p.line2 {
     /*left: 50%;*/
     /*-webkit-transform: translateX(-50%);*/
     /*transform: translateX(-50%);*/
-    background: url("http://upaicdn.xinmei365.com/font-activity/images/very-code-input.png");
+    background: url("http://fonts.b0.upaiyun.com/font-activity/images/very-code-input.png");
     position: relative;
 }
 .very-code-model .very-code-code input {
@@ -1578,16 +1604,16 @@ p.line2 {
     margin-top: 40px;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background: url("http://upaicdn.xinmei365.com/font-activity/images/login-btn.png");
+    background: url("http://fonts.b0.upaiyun.com/font-activity/images/login-btn.png");
 }
 .very-code-model .submit.disabled {
     width: 420px;
     height: 133px;
-    background: url("http://upaicdn.xinmei365.com/font-activity/images/login-btn-gray.png");
+    background: url("http://fonts.b0.upaiyun.com/font-activity/images/login-btn-gray.png");
 }
 
 .error-code .message {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p-send-code-error.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-error.png') no-repeat;
     width: 674px;
     height: 559px;
     top: 50%;
@@ -1606,7 +1632,7 @@ p.line2 {
     display: block;
 }
 .success-code .message {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p-send-code-success.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-success.png') no-repeat;
     width: 674px;
     height: 559px;
     top: 50%;
@@ -1626,7 +1652,7 @@ p.line2 {
 }
 
 .empty-mobile .message {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p-mobile-empty.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p-mobile-empty.png') no-repeat;
     width: 674px;
     height: 559px;
     top: 50%;
@@ -1645,7 +1671,7 @@ p.line2 {
     display: block;
 }
 .error-network .message {
-    background: url('http://upaicdn.xinmei365.com/font-activity/images/p1-2_join-error.png') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-2_join-error.png') no-repeat;
     width: 674px;
     height: 559px;
     top: 50%;

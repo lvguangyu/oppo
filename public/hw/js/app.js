@@ -555,10 +555,11 @@ function p3WallProductions() {
                 if (!$(this).hasClass('checked')) {
                     var tar = $(this);
                     $.post(config.api.praise, {id: tar.data('id'), 'token': $user.token}, function (res) {
-                        if (!$user.b1_praised) {
-                            $('.p3-got-draw').show();
-                        }
-                        console.log(res);
+                        // if (!$user.b1_praised) {
+                        //     $('.p3-got-draw').show();
+                        //     $user.b1_praised = true;
+                        // }
+                        // console.log(res);
                         tar.addClass('checked');
                         $('.b1_draw_count').text(res.data.b1_draw_count);
                         $user.b1_praised = res.data.b1_praised;
@@ -1023,6 +1024,8 @@ function initP2() {
                 $('.a1_draw_count').text(res.data.a1_draw_count);
                 //alert('成功参与，获得一次抽奖机会');
                 if (!$user.a1_voted) {
+                     $user.a1_voted = true;
+                     $("#p2-vote").unbind("click");
                      $('.p2-got-draw-first').show();
                 }
             } else {
@@ -1361,7 +1364,7 @@ function preloadP3(preload) {
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_zan-default.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address-bg.png");
-
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_got-draw-first.png");
 }
 function handleFileComplete() {
     console.log('load');
