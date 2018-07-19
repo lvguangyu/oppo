@@ -1361,8 +1361,7 @@ function preloadP3(preload) {
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_zan-default.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-change-address-bg.png");
-    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_got-draw-first.png")
-
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_got-draw-first.png");
 }
 function handleFileComplete() {
     console.log('load');
