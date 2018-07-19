@@ -555,14 +555,14 @@ function p3WallProductions() {
                 if (!$(this).hasClass('checked')) {
                     var tar = $(this);
                     $.post(config.api.praise, {id: tar.data('id'), 'token': $user.token}, function (res) {
-                        if (!$user.b1_praised) {
-                            $('.p3-got-draw').show();
-                            $user.b1_praised = true;
-                        }
-                        console.log(res);
+                        // if (!$user.b1_praised) {
+                        //     $('.p3-got-draw').show();
+                        //     $user.b1_praised = true;
+                        // }
+                        // console.log(res);
                         tar.addClass('checked');
                         $('.b1_draw_count').text(res.data.b1_draw_count);
-                        // $user.b1_praised = res.data.b1_praised;
+                        $user.b1_praised = res.data.b1_praised;
                     }, 'json');
                 } else {
                     var tar = $(this);
@@ -570,7 +570,7 @@ function p3WallProductions() {
                         console.log(res);
                         tar.removeClass('checked');
                         $('.b1_draw_count').text(res.data.b1_draw_count);
-                        // $user.b1_praised = res.data.b1_praised;
+                        $user.b1_praised = res.data.b1_praised;
                     }, 'json');
                 }
             });
