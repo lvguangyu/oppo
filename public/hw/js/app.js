@@ -443,7 +443,11 @@ function p3WallWinners() {
             tar.html('');
             var list = [];
             $.each(res.data, function (i, row) {
-                list.push('<div class="swiper-slide"><p>恭喜 ' + row.mobile + '<br>获得 ' + (row.award ? row.award.title : '') + ' 奖品 </p></div>')
+                var mobile = row.mobile;
+                if (mobile) {
+                    mobile = mobile.substr(0, 3) + '****' + mobile.substr(7);
+                    list.push('<div class="swiper-slide"><p>恭喜 ' + mobile + '<br>获得 ' + (row.award ? row.award.title : '') + ' 奖品 </p></div>')
+                }
             });
 
             tar.html(list.join(''));
@@ -482,6 +486,7 @@ function initP3WallDraw() {
                 console.log('winner');
                 $user.win = res.data.winner.id;
                 $('.p3-draw-winner').show();
+                $('.p3-draw-winner .award-title').html('恭喜您获得' + res.data.winner.name);
             } else {
                 console.log('no winner');
                 $('.p3-no-winner').show();

@@ -1499,7 +1499,7 @@ p.line2 {
 .p3-nextday .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_nextday.png') no-repeat;}
 .p3-error .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-2_upload-error.png') no-repeat;}
 
-.p3-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-success.png') no-repeat;}
+.p3-success .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-success.png') no-repeat;}
 .p3-got-draw .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p2/p2-1_got-draw-first.png') no-repeat;}.p3-praise-first .message:after{ background: url('http://fonts.b0.upaiyun.com/font-activity/images/p3/p3-1_praise-first.png') no-repeat;}
 .p3-try-tomorrow .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-try-tomorrow.png') no-repeat;}
 .p3-comment-success .message:after{ background: url('http://img1.deexcul.com/oppo/static/p3-comment-success.png') no-repeat;}
