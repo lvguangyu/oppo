@@ -1024,6 +1024,9 @@ function initP2() {
                 //alert('成功参与，获得一次抽奖机会');
                 if (!$user.a1_voted) {
                      $('.p2-got-draw-first').show();
+                } else {
+                    $user.a1_voted = true;
+                    $("#p2-vote").unbind("click");
                 }
             } else {
                 $('.p1-error').show();
