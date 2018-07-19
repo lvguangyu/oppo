@@ -443,7 +443,7 @@ function p3WallWinners() {
             tar.html('');
             var list = [];
             $.each(res.data, function (i, row) {
-                var mobile = row.mobile;
+                var mobile = row.mobile2;
                 if (mobile) {
                     mobile = mobile.substr(0, 3) + '****' + mobile.substr(7);
                     list.push('<div class="swiper-slide"><p>恭喜 ' + mobile + '<br>获得 ' + (row.award ? row.award.title : '') + ' 奖品 </p></div>')
