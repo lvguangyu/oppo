@@ -446,8 +446,8 @@ function p3WallWinners() {
                 var mobile = row.mobile;
                 if (mobile) {
                     mobile = mobile.substr(0, 3) + '****' + mobile.substr(7);
+                    list.push('<div class="swiper-slide"><p>恭喜 ' + mobile + '<br>获得 ' + (row.award ? row.award.title : '') + ' 奖品 </p></div>')
                 }
-                list.push('<div class="swiper-slide"><p>恭喜 ' + mobile + '<br>获得 ' + (row.award ? row.award.title : '') + ' 奖品 </p></div>')
             });
 
             tar.html(list.join(''));
