@@ -56,6 +56,7 @@ class AwardController extends BaseController
                 $winner = Winner::create([
                     'user_id' => $user->id,
                     'award_id' => $row->id,
+                    'award_title' => $row->title,
                     'mobile' => $user->mobile
                 ]);
 
