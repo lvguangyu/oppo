@@ -15,6 +15,7 @@ class WinnerTransformer extends BaseTransformer
         return [
             'id' => $item->id,
             'mobile' => $item->mobile,
+            'mobile2' => $item->mobile2,
             'award' => $item->award ? [
                 'title' => $item->award->title,
                 'desc' => $item->award->desc,
