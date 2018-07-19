@@ -286,11 +286,37 @@ body.p3{
 img {
     width: 100%;
 }
+.p1-top {
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-1_01.jpg') no-repeat;
+    width: 1080px;
+    height: 2458px;
+}
+.p1-button {
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-1_submit.jpg') no-repeat;
+    width: 1080px;
+    height: 223px;
+}
+.p1-bottom {
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-1_03.jpg') no-repeat;
+    width: 1080px;
+    height: 1969px;
+}
 
 .p1-1-1 {
     background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-2_bg.jpg') no-repeat;
     width: 1080px;
     height: 1920px;
+}
+.p1-1-1 .close {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('http://fonts.b0.upaiyun.com/font-activity/images/close.png');
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    right: 69px;
+    top: 69px;
 }
 
 .p1-1-1 .area1 {
