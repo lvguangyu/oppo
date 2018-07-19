@@ -570,7 +570,7 @@ function p3WallProductions() {
                         console.log(res);
                         tar.removeClass('checked');
                         $('.b1_draw_count').text(res.data.b1_draw_count);
-                        $user.b1_praised = res.data.b1_praised;
+                        // $user.b1_praised = res.data.b1_praised;
                     }, 'json');
                 }
             });
