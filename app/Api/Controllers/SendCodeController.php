@@ -36,7 +36,7 @@ class SendCodeController extends Controller
         curl_setopt($ch, CURLOPT_USERPWD  , 'api:key-04fb287dc9d402a7b2fe6d12ab2c061d');
 
         curl_setopt($ch, CURLOPT_POST, TRUE);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, array('mobile' => $mobile,'message' => '验证码为' . $param . '，请在活动页面中输入完成验证。愿你以梦为马，诗酒趁年华！【铁壳测试】'));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, array('mobile' => $mobile,'message' => '验证码为' . $param . '，请在活动页面中输入完成验证。愿你以梦为马，诗酒趁年华！【手写诗词大赛】'));
 
         $res = curl_exec( $ch );
         curl_close( $ch );
