@@ -287,19 +287,29 @@ img {
     width: 100%;
 }
 .p1-top {
-    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-1_01.jpg') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1_01.jpg') no-repeat;
     width: 1080px;
-    height: 2765px;
+    height: 2749px;
 }
 .p1-button {
-    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-1_submit.jpg') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1_02.jpg') no-repeat;
     width: 1080px;
-    height: 236px;
+    height: 235px;
+}
+.p1-middle {
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1_03.jpg') no-repeat;
+    width: 1080px;
+    height: 687px;
+}
+.p1-middle a {
+    width: 1080px;
+    height: 687px;
+    display:block;
 }
 .p1-bottom {
-    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1-1_03.jpg') no-repeat;
+    background: url('http://fonts.b0.upaiyun.com/font-activity/images/p1_04.jpg') no-repeat;
     width: 1080px;
-    height: 2078px;
+    height: 2116px;
 }
 
 .p1-1-1 {

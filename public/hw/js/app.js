@@ -443,7 +443,7 @@ function p3WallWinners() {
             tar.html('');
             var list = [];
             $.each(res.data, function (i, row) {
-                var mobile = row.mobile;
+                var mobile = row.mobile2;
                 if (mobile) {
                     mobile = mobile.substr(0, 3) + '****' + mobile.substr(7);
                     list.push('<div class="swiper-slide"><p>恭喜 ' + mobile + '<br>获得 ' + (row.award ? row.award.title : '') + ' 奖品 </p></div>')
@@ -1302,10 +1302,10 @@ function preloadP1(preload) {
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-success.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-error.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-mobile-empty.png");
-    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_01.jpg");
-    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_02.jpg");
-    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_03.jpg");
-    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_submit.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1_01.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1_02.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1_03.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1_04.jpg");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_bg.jpg");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_01.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_02.png");
