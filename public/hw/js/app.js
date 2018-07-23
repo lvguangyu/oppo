@@ -1302,10 +1302,10 @@ function preloadP1(preload) {
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-success.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-send-code-error.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p-mobile-empty.png");
-    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_01.jpg");
-    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_02.jpg");
-    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_03.jpg");
-    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-1_submit.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1_01.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1_02.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1_03.jpg");
+    preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1_04.jpg");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_bg.jpg");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_01.png");
     preload.loadFile("http://fonts.b0.upaiyun.com/font-activity/images/p1-2_02.png");
