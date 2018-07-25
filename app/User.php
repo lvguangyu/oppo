@@ -82,7 +82,7 @@ class User extends Authenticatable
             return 0;
         }
 
-        return 1 - $this->draws()->where('created_at', 'LIKE', date('Y-m-d').'%')->where('type', 'A')->count();
+        return 3 - $this->draws()->where('created_at', 'LIKE', date('Y-m-d').'%')->where('type', 'A')->count();
     }
 
     public static function getUserByWechat($wechat)
