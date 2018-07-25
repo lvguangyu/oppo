@@ -19,6 +19,10 @@ class ProductionController extends BaseController
             $list = $list->where('is_up_wall', 1);
         }
 
+        if($request->exists('is_admin_upload')){
+            $list = $list->where('is_admin_upload', $request->get('is_admin_upload'));
+        }
+
         $list = $list->paginate($this->limit);
         return $this->response->paginator($list, new ProductionTransformer());
     }
@@ -40,10 +44,10 @@ class ProductionController extends BaseController
 
         return $this->autoResponse($res);
     }
-    
+
     public function store(Request $request)
     {
-        $res = Production::create(['user_id' => 1, 'is_up_wall' => 1, 'shown_wall' => 1, 'url' => $request->get('url')]);
+        $res = Production::create(['user_id' => 1, 'is_up_wall' => 1, 'shown_wall' => 1, 'url' => $request->get('url'), 'is_admin_upload' => $request->get('is_admin_upload', 0)]);
         return $this->autoResponse($res);
     }
 
@@ -70,27 +74,30 @@ class ProductionController extends BaseController
             });
         })->export('xls');
     }
-    
+
     public function export_image()
     {
-        $zip = new \ZipArchive();
-        $tmp_file = storage_path('app/pack.zip');
-        $productions = Production::all();
-
-        if ($zip->open($tmp_file,  \ZipArchive::CREATE)) {
-            foreach ($productions as $production) {
-                $tmp = file_put_contents(storage_path('app/'.$production->id.'.png'), file_get_contents($production->url));
-                $zip->addFile($tmp, $production->id . '.png');
-            }
-            $zip->close();
-            echo 'Archive created!';
-            header('Content-disposition: attachment; filename=pack.zip');
-            header('Content-type: application/zip');
-            ob_clean();
-            flush();
-            readfile($tmp_file);
-        } else {
-            echo 'Failed!';
+        $filename = str_replace('\\', '/', storage_path()) . '/app/作品图片_' . date('YmdHis') . '.zip';
+        $zip = new \ZipArchive (); // 使用本类，linux需开启zlib，windows需取消php_zip.dll前的注释
+        if ($zip->open($filename, \ZIPARCHIVE::CREATE) !== TRUE) {
+            exit ('无法打开文件，或者文件创建失败');
         }
+
+        $productions = Production::all();
+        foreach ($productions as $production) {
+            $tmpName = storage_path('app/'.$production->id.'.png');
+            file_put_contents($tmpName, file_get_contents($production->url));
+            $zip->addFile($tmpName, $production->user->oppo_id.'_'.$production->id . '.png');
+        }
+
+        $zip->close(); // 关闭
+        ////下面是输出下载;
+        header("Cache-Control: max-age=0");
+        header("Content-Description: File Transfer");
+        header('Content-disposition: attachment; filename=' . basename($filename)); // 文件名
+        header("Content-Type: application/zip"); // zip格式的
+        header("Content-Transfer-Encoding: binary"); // 告诉浏览器，这是二进制文件
+        header('Content-Length: ' . filesize($filename)); // 告诉浏览器，文件大小
+        @readfile($filename);//输出文件;
     }
 }
