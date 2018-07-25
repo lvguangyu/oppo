@@ -1,5 +1,19 @@
 var $user = {};
 var clearIndex = null;
+
+var rotateTimeOut;
+var rotateFn;
+var turnplate={
+    restaraunts:[],				//大转盘奖品名称
+    colors:[],					//大转盘奖品区块对应背景颜色
+    outsideRadius:240,			//大转盘外圆的半径
+    textRadius:155,				//大转盘奖品位置距离圆心的距离
+    insideRadius:68,			//大转盘内圆的半径
+    startAngle:0,				//开始角度
+    randomRate:[],              //控制获奖率，百分制(相加需等于100%)，对应restaraunts(顺序需要保持一致)，
+    bRotate:false				//false:停止;ture:旋转
+};
+
 $(document).ready(function () {
     initDefault();
     setTimeout(function () {
@@ -253,6 +267,10 @@ function getUserInfo() {
     }, 'json');
 }
 function initP1() {
+    $('.p1-join-success .close').click(function(){
+        $('.p1-1-1').fadeOut('fast');
+        $('.p1').fadeIn('fast');
+    });
     //我要参赛
     $('.p1-button').click(function () {
         var isLogin = checkoutLogin();
@@ -485,15 +503,15 @@ function initP3WallDraw() {
             if (res.code === 200 && res.data.winner !== false) {
                 console.log('winner');
                 $user.win = res.data.winner.id;
-                $('.p3-draw-winner').show();
                 $('.p3-draw-winner .award-title').html('恭喜您获得' + res.data.winner.name);
+                $('.p3-draw-winner').show();
             } else {
                 console.log('no winner');
                 $('.p3-no-winner').show();
             }
 
             $('.b1_draw_count').text(res.data.b1_draw_count);
-
+            $user.b1_draw_count = res.data.b1_draw_count;
         }, 'json');
     });
 }
@@ -525,6 +543,11 @@ function p3WallMineAwards() {
             });
 
             tar.html(list.join(''));
+            if(list.length <= 0) {
+                $('.p3-edit-address').hide();
+            } else {
+                $('.p3-edit-address').show();
+            }
         }
     }, 'json');
 }
@@ -943,7 +966,9 @@ function ajaxEditSubmitP2() {
 }
 
 function initP2() {
-    initRotate();
+    setTimeout(function () {
+        initRotate();
+    }, 1000);
     p2ExcellentWinners();
     p2ExcellentMineAwards();
     $('.shadow .close').click(function () {
@@ -1060,212 +1085,163 @@ function initP2() {
 }
 
 function initRotate() {
-    var turnplate = {
-        restaraunts: [],                //大转盘奖品名称
-        colors: [],                 //大转盘奖品区块对应背景颜色
-        outsideRadius: 240,         //大转盘外圆的半径
-        textRadius: 155,                //大转盘奖品位置距离圆心的距离
-        insideRadius: 68,           //大转盘内圆的半径
-        startAngle: 0,              //开始角度
-        randomRate: [],              //控制获奖率，百分制(相加需等于100%)，对应restaraunts(顺序需要保持一致)，
-        bRotate: false              //false:停止;ture:旋转
+    turnplate.randomRate = ["20%", '10%', '10%', '10%', '50%'];  //小心设置按100%分配
+    turnplate.restaraunts = ["黄铜书签", "羽毛笔","谢谢参与", "星星彩灯", "谢谢参与"];
+    turnplate.colors = ["#353535", "#282828", "#464646", "#171717", "#928c8c"];
+
+    drawRouletteWheel();
+
+    rotateTimeOut = function () {
+        $('#wheelcanvas').rotate({
+            angle: 0,
+            animateTo: 2160,
+            duration: 8000,
+            callback: function () {
+                $('.p1-error').show();
+            }
+        });
     };
 
-    $(document).ready(function () {
-        //动态添加大转盘的奖品与奖品区域背景颜色
-        turnplate.randomRate = ["20%", '10%', '10%', '10%', '50%'];  //小心设置按100%分配
-        turnplate.restaraunts = ["黄铜书签", "羽毛笔","谢谢参与", "星星彩灯", "谢谢参与"];
-        turnplate.colors = ["#353535", "#282828", "#464646", "#171717", "#928c8c"];
+    rotateFn = function (item, txt) {
+        var angles = item * (360 / turnplate.restaraunts.length) - (360 / (turnplate.restaraunts.length * 2));
+        if (angles < 270) {
+            angles = 270 - angles;
+        } else {
+            angles = 360 - angles + 270;
+        }
+        $('#wheelcanvas').stopRotate();
+        $('#wheelcanvas').rotate({
+            angle: 0,
+            animateTo: angles + 1800,
+            duration: 8000,
+            callback: function () {
+                // alert(txt);
+                console.log(item, txt);
 
-
-        var rotateTimeOut = function () {
-            $('#wheelcanvas').rotate({
-                angle: 0,
-                animateTo: 2160,
-                duration: 8000,
-                callback: function () {
-                    $('.p1-error').show();
+                if (item === 5) {
+                    $('.p1-no-winner').show();
+                } else {
+                    console.log('win');
+                    $('.p2-draw-winner').show();
                 }
-            });
-        };
 
-        //旋转转盘 item:奖品位置; txt：提示语;
-        var rotateFn = function (item, txt) {
-            var angles = item * (360 / turnplate.restaraunts.length) - (360 / (turnplate.restaraunts.length * 2));
-            if (angles < 270) {
-                angles = 270 - angles;
-            } else {
-                angles = 360 - angles + 270;
+                turnplate.bRotate = !turnplate.bRotate;
             }
-            $('#wheelcanvas').stopRotate();
-            $('#wheelcanvas').rotate({
-                angle: 0,
-                animateTo: angles + 1800,
-                duration: 8000,
-                callback: function () {
-                    // alert(txt);
-                    console.log(item, txt);
-
-                    if (item === 5) {
-                        $('.p1-no-winner').show();
-                    } else {
-                        console.log('win');
-                        $('.p2-draw-winner').show();
-                    }
-
-                    turnplate.bRotate = !turnplate.bRotate;
-                }
-            });
-        };
-
-        $('.p2-up-raffle').click(function () {
-            var isLogin = checkoutLogin();
-            if (!isLogin) {
+        });
+    };
+    $('.p2-up-raffle').click(function () {
+        var isLogin = checkoutLogin();
+        if (!isLogin) {
+            return;
+        }
+        var $canDraw = parseInt($('.a1_draw_count').text());
+        if (parseInt($canDraw) <= 0) {
+            if (!$user.a1_voted) {
+                $('.p2-vote-first').show();
+                return;
+            } else {
+                $('.p2-nextday').show();
                 return;
             }
-            var $canDraw = parseInt($('.a1_draw_count').text());
-            if (parseInt($canDraw) <= 0) {
-                if (!$user.a1_voted) {
-                    $('.p2-vote-first').show();
-                    return;
-                } else {
-                    $('.p2-nextday').show();
-                    return;
-                }
+        }
+        $('.a1_draw_count').text($canDraw - 1);
+
+        if (turnplate.bRotate) return;
+        turnplate.bRotate = !turnplate.bRotate;
+
+        //获取随机数(奖品个数范围内)
+        // var item = rnd(turnplate.randomRate);
+        // rotateFn(item, turnplate.restaraunts[item - 1])
+
+        $.post(config.api.excellentDraw, {'token': $user.token}, function (res) {
+            console.log(res);
+            if (res.code === 200) {
+                var item = res.data.item;
+                $user.a1_voted = res.data.a1_voted;
+                $user.win = res.data.winner.id;
+                //奖品数量等于10,指针落在对应奖品区域的中心角度[252, 216, 180, 144, 108, 72, 36, 360, 324, 288]
+                rotateFn(item, turnplate.restaraunts[item - 1]);
             }
-            $('.a1_draw_count').text($canDraw - 1);
-
-            if (turnplate.bRotate) return;
-            turnplate.bRotate = !turnplate.bRotate;
-
-            //获取随机数(奖品个数范围内)
-            // var item = rnd(turnplate.randomRate);
-            // rotateFn(item, turnplate.restaraunts[item - 1])
-
-            $.post(config.api.excellentDraw, {'token': $user.token}, function (res) {
-                console.log(res);
-                if (res.code === 200) {
-                    var item = res.data.item;
-                    $user.a1_voted = res.data.a1_voted;
-                    $user.win = res.data.winner.id;
-                    //奖品数量等于10,指针落在对应奖品区域的中心角度[252, 216, 180, 144, 108, 72, 36, 360, 324, 288]
-                    rotateFn(item, turnplate.restaraunts[item - 1]);
-                }
-            }, 'json');
-        });
+        }, 'json');
     });
+}
 
-    function rnd(rate) {
-        var random = Math.floor(Math.random() * 100);
-        var myRandom = [];
-        var randomList = [];
-        var randomParent = [];
-        for (var i = 0; i < 100; i++) {
-            myRandom.push(parseInt([i]) + 1);
-        }
-        for (var i = 0; i < rate.length; i++) {
-            var temp = [];
-            var start = 0;
-            var end = 0;
-            randomList.push(parseInt(rate[i].split('%')[0]));
-            for (var j = 0; j < randomList.length; j++) {
-                start += randomList[j - 1] || 0
-                end += randomList[j]
-            }
-            temp = myRandom.slice(start, end);
-            randomParent.push(temp)
-        }
-        for (var i = 0; i < randomParent.length; i++) {
-            if ($.inArray(random, randomParent[i]) > 0) {
-                return (i + 1)
-            }
-        }
+function drawRouletteWheel() {
+    console.log('drawRouletteWheel');
+    var canvas = document.getElementById("wheelcanvas");
+    if (canvas.getContext) {
+        //根据奖品个数计算圆周角度
+        var arc = Math.PI / (turnplate.restaraunts.length / 2);
+        var ctx = canvas.getContext("2d");
+        //在给定矩形内清空一个矩形
+        ctx.clearRect(0, 0, turnplate.outsideRadius * 2, turnplate.outsideRadius * 2);
+        //strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式
+        ctx.strokeStyle = "#237b51";
+        //font 属性设置或返回画布上文本内容的当前字体属性
+        ctx.font = '30px Microsoft YaHei';
+        for (var i = 0; i < turnplate.restaraunts.length; i++) {
+            var angle = turnplate.startAngle + i * arc;
+            ctx.fillStyle = turnplate.colors[i];
+            ctx.beginPath();
+            //arc(x,y,r,起始角,结束角,绘制方向) 方法创建弧/曲线（用于创建圆或部分圆）
+            ctx.arc(turnplate.outsideRadius, turnplate.outsideRadius, turnplate.outsideRadius, angle, angle + arc, false);
+            ctx.arc(turnplate.outsideRadius, turnplate.outsideRadius, turnplate.insideRadius, angle + arc, angle, true);
+            ctx.stroke();
+            ctx.fill();
+            //锁画布(为了保存之前的画布状态)
+            ctx.save();
 
-    }
+            //----绘制奖品开始----
+            // ctx.fillStyle = "#237b51";
+            ctx.fillStyle = "#fff";
+            var text = turnplate.restaraunts[i];
+            var line_height = 31;
+            //translate方法重新映射画布上的 (0,0) 位置
+            ctx.translate(turnplate.outsideRadius + Math.cos(angle + arc / 2) * turnplate.textRadius, turnplate.outsideRadius + Math.sin(angle + arc / 2) * turnplate.textRadius);
 
+            //rotate方法旋转当前的绘图
+            ctx.rotate(angle + arc / 2 + Math.PI / 2);
 
-//页面所有元素加载完毕后执行drawRouletteWheel()方法对转盘进行渲染
-    window.onload = function () {
-        drawRouletteWheel();
-    };
-
-    function drawRouletteWheel() {
-        console.log('drawRouletteWheel');
-        var canvas = document.getElementById("wheelcanvas");
-        if (canvas.getContext) {
-            //根据奖品个数计算圆周角度
-            var arc = Math.PI / (turnplate.restaraunts.length / 2);
-            var ctx = canvas.getContext("2d");
-            //在给定矩形内清空一个矩形
-            ctx.clearRect(0, 0, turnplate.outsideRadius * 2, turnplate.outsideRadius * 2);
-            //strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式
-            ctx.strokeStyle = "#237b51";
-            //font 属性设置或返回画布上文本内容的当前字体属性
-            ctx.font = '30px Microsoft YaHei';
-            for (var i = 0; i < turnplate.restaraunts.length; i++) {
-                var angle = turnplate.startAngle + i * arc;
-                ctx.fillStyle = turnplate.colors[i];
-                ctx.beginPath();
-                //arc(x,y,r,起始角,结束角,绘制方向) 方法创建弧/曲线（用于创建圆或部分圆）
-                ctx.arc(turnplate.outsideRadius, turnplate.outsideRadius, turnplate.outsideRadius, angle, angle + arc, false);
-                ctx.arc(turnplate.outsideRadius, turnplate.outsideRadius, turnplate.insideRadius, angle + arc, angle, true);
-                ctx.stroke();
-                ctx.fill();
-                //锁画布(为了保存之前的画布状态)
-                ctx.save();
-
-                //----绘制奖品开始----
-                // ctx.fillStyle = "#237b51";
-                ctx.fillStyle = "#fff";
-                var text = turnplate.restaraunts[i];
-                var line_height = 31;
-                //translate方法重新映射画布上的 (0,0) 位置
-                ctx.translate(turnplate.outsideRadius + Math.cos(angle + arc / 2) * turnplate.textRadius, turnplate.outsideRadius + Math.sin(angle + arc / 2) * turnplate.textRadius);
-
-                //rotate方法旋转当前的绘图
-                ctx.rotate(angle + arc / 2 + Math.PI / 2);
-
-                /** 下面代码根据奖品类型、奖品名称长度渲染不同效果，如字体、颜色、图片效果。(具体根据实际情况改变) **/
-                if (text.indexOf("M") > 0) {//流量包
-                    var texts = text.split("M");
-                    for (var j = 0; j < texts.length; j++) {
-                        ctx.font = j == 0 ? 'bold 30px Microsoft YaHei' : '30px Microsoft YaHei';
-                        if (j == 0) {
-                            ctx.fillText(texts[j] + "M", -ctx.measureText(texts[j] + "M").width / 2, j * line_height);
-                        } else {
-                            ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
-                        }
-                    }
-                } else if (text.indexOf("M") == -1 && text.length > 6) {//奖品名称长度超过一定范围
-                    text = text.substring(0, 6) + "||" + text.substring(6);
-                    var texts = text.split("||");
-                    for (var j = 0; j < texts.length; j++) {
+            /** 下面代码根据奖品类型、奖品名称长度渲染不同效果，如字体、颜色、图片效果。(具体根据实际情况改变) **/
+            if (text.indexOf("M") > 0) {//流量包
+                var texts = text.split("M");
+                for (var j = 0; j < texts.length; j++) {
+                    ctx.font = j == 0 ? 'bold 30px Microsoft YaHei' : '30px Microsoft YaHei';
+                    if (j == 0) {
+                        ctx.fillText(texts[j] + "M", -ctx.measureText(texts[j] + "M").width / 2, j * line_height);
+                    } else {
                         ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
                     }
-                } else {
-                    //在画布上绘制填色的文本。文本的默认颜色是黑色
-                    //measureText()方法返回包含一个对象，该对象包含以像素计的指定字体宽度
-                    ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
                 }
-
-                //添加对应图标
-                if (text.indexOf("猫币") > 0) {
-                    var img = document.getElementById("shan-img");
-                    img.onload = function () {
-                        ctx.drawImage(img, -15, 10);
-                    };
-                    ctx.drawImage(img, -15, 10);
-                } else if (text.indexOf("谢谢参与") >= 0) {
-                    var img = document.getElementById("sorry-img");
-                    img.onload = function () {
-                        ctx.drawImage(img, -15, 10);
-                    };
-                    ctx.drawImage(img, -15, 10);
+            } else if (text.indexOf("M") == -1 && text.length > 6) {//奖品名称长度超过一定范围
+                text = text.substring(0, 6) + "||" + text.substring(6);
+                var texts = text.split("||");
+                for (var j = 0; j < texts.length; j++) {
+                    ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
                 }
-                //把当前画布返回（调整）到上一个save()状态之前
-                ctx.restore();
-                //----绘制奖品结束----
+            } else {
+                //在画布上绘制填色的文本。文本的默认颜色是黑色
+                //measureText()方法返回包含一个对象，该对象包含以像素计的指定字体宽度
+                ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
             }
+
+            //添加对应图标
+            if (text.indexOf("猫币") > 0) {
+                var img = document.getElementById("shan-img");
+                img.onload = function () {
+                    ctx.drawImage(img, -15, 10);
+                };
+                ctx.drawImage(img, -15, 10);
+            } else if (text.indexOf("谢谢参与") >= 0) {
+                var img = document.getElementById("sorry-img");
+                img.onload = function () {
+                    ctx.drawImage(img, -15, 10);
+                };
+                ctx.drawImage(img, -15, 10);
+            }
+            //把当前画布返回（调整）到上一个save()状态之前
+            ctx.restore();
+            //----绘制奖品结束----
         }
     }
 }
