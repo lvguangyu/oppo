@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Production extends Model
 {
     protected $fillable = [
-        'url', 'is_up_wall', 'is_show', 'shown_wall', 'user_id', 'excellent'
+        'url', 'is_up_wall', 'is_show', 'shown_wall', 'user_id', 'excellent', 'is_admin_upload'
     ];
 
     public function user()
