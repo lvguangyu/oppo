@@ -1,6 +1,6 @@
 // const host = 'http://oppo.test/api/'
 // const host = 'http://oppo-test.deexcul.com/api/';
-const host = 'http://hwhd.fx12.cn:81/api/';
+const host = 'http://hwhd.zitiguanjia.com:81/api/';
 const config = {
 	api: {
         sendCode: host + 'send_code',
