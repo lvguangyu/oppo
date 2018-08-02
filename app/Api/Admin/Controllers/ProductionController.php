@@ -47,7 +47,7 @@ class ProductionController extends BaseController
 
     public function store(Request $request)
     {
-        $res = Production::create(['user_id' => 1, 'is_up_wall' => 1, 'shown_wall' => 1, 'url' => $request->get('url'), 'is_admin_upload' => $request->get('is_admin_upload', 0)]);
+        $res = Production::create(['user_id' => 25, 'is_up_wall' => 1, 'shown_wall' => 1, 'url' => $request->get('url'), 'is_admin_upload' => $request->get('is_admin_upload', 0)]);
         return $this->autoResponse($res);
     }
 
