@@ -75,19 +75,24 @@ class ProductionController extends BaseController
         })->export('xls');
     }
 
-    public function export_image()
+    public function export_image(Request $request)
     {
+        set_time_limit(120);
+        ini_set('memory_limit', '2048M');
         $filename = str_replace('\\', '/', storage_path()) . '/app/作品图片_' . date('YmdHis') . '.zip';
         $zip = new \ZipArchive (); // 使用本类，linux需开启zlib，windows需取消php_zip.dll前的注释
         if ($zip->open($filename, \ZIPARCHIVE::CREATE) !== TRUE) {
             exit ('无法打开文件，或者文件创建失败');
         }
 
-        $productions = Production::all();
+        $limit = 100;
+        $offset = ($request->get('page', 1) - 1) * $limit;
+        $productions = Production::offset($offset)->limit($limit)->get();
         foreach ($productions as $production) {
             $tmpName = storage_path('app/'.$production->id.'.png');
             file_put_contents($tmpName, file_get_contents($production->url));
-            $zip->addFile($tmpName, $production->user->oppo_id.'_'.$production->id . '.png');
+            $m = $production->user->mobile ? $production->user->mobile : $production->user->oppo_id;
+            $zip->addFile($tmpName, $m.'_'.$production->id . '.png');
         }
 
         $zip->close(); // 关闭
