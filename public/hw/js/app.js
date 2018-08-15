@@ -1019,13 +1019,14 @@ function initP2() {
             $('#p2-up-frame').html(list.join(''));
 
             $('#p2-up-frame .btn').unbind('click').click(function () {
-                if ($('#p2-up-frame .btn.checked').length >= 3) {
-                    return;
-                }
-                if (!$(this).hasClass('checked')) {
-                    $(this).addClass('checked');
-                } else {
+                if ($(this).hasClass('checked')) {
                     $(this).removeClass('checked');
+                } else {
+                    if ($('#p2-up-frame .btn.checked').length >= 3) {
+                        return;
+                    } else {
+                        $(this).addClass('checked');
+                    }
                 }
 
                 $('.p2-vote-selected').text($('#p2-up-frame').find('.checked').length);
