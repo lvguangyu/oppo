@@ -1091,7 +1091,7 @@ function initP2() {
 
 function initRotate() {
     turnplate.randomRate = ["20%", '10%', '10%', '10%', '50%'];  //小心设置按100%分配
-    turnplate.restaraunts = ["黄铜书签", "羽毛笔","谢谢参与", "星星彩灯", "谢谢参与"];
+    turnplate.restaraunts = ["复古书签", "羽毛笔","谢谢参与", "星星彩灯", "谢谢参与"];
     turnplate.colors = ["#353535", "#282828", "#464646", "#171717", "#928c8c"];
 
     drawRouletteWheel();
