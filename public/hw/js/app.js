@@ -827,7 +827,11 @@ function p2ExcellentWinners() {
             tar.html('');
             var list = [];
             $.each(res.data, function (i, row) {
-                list.push('<div class="swiper-slide"><p>恭喜 ' + row.mobile + '<br>获得 ' + (row.award ? row.award.desc : '') + ' </p></div>')
+                var mobile = row.mobile;
+                if (mobile) {
+                    mobile = mobile.substr(0, 3) + '****' + mobile.substr(7);
+                    list.push('<div class="swiper-slide"><p>恭喜 ' + mobile + '<br>获得 ' + (row.award ? row.award.desc : '') + ' </p></div>');
+                }
             });
 
             tar.html(list.join(''));
