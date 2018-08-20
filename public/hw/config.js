@@ -23,7 +23,7 @@ const config = {
     excellentProduction: host + 'excellent/production', //获取优秀作品列表
 		vote: host + 'production/vote', //优秀作品投票
     excellentDraw: host + 'excellent/draw', //优秀作品抽奖
-    excellentWinners: host + 'excellent/winners', //优秀作品中奖者列表
+    excellentWinners: host + 'wall/winners', //优秀作品中奖者列表
     excellentMineAward: host + 'excellent/awards/mine', //优秀作品中奖者列表
     excellentSubmit: host + 'excellent/submit', //优秀作品中奖提交信息
 	}
